@@ -4,7 +4,7 @@ The IPython notebook allows extending the frontend functionality (i.e. what you 
 # Overview
 | Name                   | Description                                                                       | 
 | ---------------------- |:---------------------------------------------------------------------------------:|
-| [nbconvert-button][]	 | add a button to call 'nbconvert --to html' for current notebook                   |
+| [nbconvert-button]()	 | add a button to call 'nbconvert --to html' for current notebook                   |
 | printview-button	 | like nbconvert-button, additionally display in new browser tab                    |
 | navigation-hotkeys     | add PGUP / PGDOWN / HOME / END for fast navigation in codecells                   |
 | comment-uncomment      | toggle comments in selected lines using Alt-C                                     |
