@@ -9,7 +9,7 @@ import os; os.system(\"ipython nbconvert --to html ' + notebookname + '\")
 This leaves the resulting static html file from your notebook in the directory where the notebook resides. Additionally, a new tab in the browser is opened and the generated static html file of the notebook is displayed.
 
 ## Installation
-Add `require(['/static/custom/printview_button.js'])` to `custom.js` in your profile's `/static/custom` directory, so it looks like this:
+Copy the `printview.js` file, and add `require(['/static/custom/printview_button.js'])` to `custom.js` in your profile's `/static/custom` directory, so it looks like this:
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
   require(['/static/custom/printview_button.js'])
