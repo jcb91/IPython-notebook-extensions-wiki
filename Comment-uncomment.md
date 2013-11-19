@@ -1,0 +1,1 @@
+Toggle line comments in a codecell using ´Alt-C´hotkey. Marking several lines will toggle comments for all selected lines.
