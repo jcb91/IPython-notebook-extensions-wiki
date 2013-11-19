@@ -9,8 +9,10 @@ The repository is organized in several directories:
 | styling                | add custom styles to the notebook                                                 |
 | testing                | alpha-level extension, not for general usage                                      |
 | usability              | improve usability of the notebook                                                 |
-| [usability/codefolding](Codefolding)              | Fold code blocks using Alt-F or clicking on gutter numbers     notebook                                                 |
-
+| [usability/codefolding](Codefolding)  | Fold code blocks using Alt-F or clicking on gutter   |
+| [usability/read-only.js](Readonly)  | Allow codecells to be set read-only, so no editing is possible   |
+| [usability/comment-uncomment.js](Comment-uncomment)  | Toggle comments in selected lines using Alt-C                                     |
+| [usability/shift-tab.js](wiki/Shift-tab)             | Assign "shift-tab" key to dedent tabilator                                                       |
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
