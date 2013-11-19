@@ -11,7 +11,10 @@ The repository is organized in several directories:
 | [usability](wiki/usability)              | improve usability of the notebook                                                 |
 
 # General installation instruction
-Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile. You can find out your profile directory by starting the IPython notebook and executing
+Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
+
+## Finding your profile directory
+You can find out your profile directory by starting the IPython notebook and executing
 ```python
 import IPython
 ip=IPython.get_ipython()
@@ -25,8 +28,19 @@ or for Unix
 So your path to copy the extensions into will be
 `/home/you/.ipython/profile_default/static/custom`
 
+## Adding the extension
+Next, you copy the extension file or complete directory to the custom directory.
+
 Finally, you have to add the extensions to the file `custom.js` in order to load them.
-This can be done best using the `require` statement. If not stated otherwise in the extension description, for example:
+This can be done best using the `require` command:
 ```javascript
 require(['/static/custom/styling/css-selector/main.js']) 
+```
+
+Your `custom.js` file might now look like this:
+```javascript
+$([IPython.events]).on('app_initialized.NotebookApp', function(){
+    require(['custom/clean_start']);
+    require(['/static/custom/styling/css-selector/main.js']);
+})
 ```
