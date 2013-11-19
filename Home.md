@@ -1,44 +1,32 @@
-# About
-The IPython notebook allows extending the frontend functionality (i.e. what you do in the Browser) using extensions written in Javascript. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
+The IPython notebook allows extending the html frontend functionality (i.e. what you do in the Browser) using extensions written in Javascript. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
-# Overview
-| Name                   | Description                                                                       | 
+The repository is organized in several directories: 
+
+| Directory              | Description                                                                       | 
 | ---------------------- |:---------------------------------------------------------------------------------:|
-| [nbconvert-button](wiki/nbconvert-button)	 | add a button to call 'nbconvert --to html' for current notebook                   |
-| printview-button	 | like nbconvert-button, additionally display in new browser tab                    |
-| navigation-hotkeys     | add PGUP / PGDOWN / HOME / END for fast navigation in codecells                   |
-| comment-uncomment      | toggle comments in selected lines using Alt-C                                     |
-| read-only              | allow codecells to be set read-only, so no editing or celle execution is possible |
-| breakpoints            | allow setting breakpoints at individual notebook cells                            |
-| shift-tab              | assign shift-tab to dedent                                                        |
-| help-panel             | display a static help panel besides the notebook                                  |
-| codefolding            | fold code blocks using Alt-F or clicking on line numbers                          |
+| [publishing](wiki/publishing)             | publish notebooks on the web or convert to other formats                          |
+| [slidemode](wiki/slidemode)              | make slide creation for reveal.js easier                                          |
+| [styling] (wiki/styling)               | add custom styles to the notebook                                                 |
+| testing                | alpha-level extension, not for general usage                                      |
+| [usability](wiki/usability)              | improve usability of the notebook                                                 |
 
 # General installation instruction
-Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile. You can find out your profile directory by starting IPython and executing
-```javascript
-  $ ipython locate
+Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile. You can find out your profile directory by starting the IPython notebook and executing
+```python
+import IPython
+ip=IPython.get_ipython()
+ip.config.ProfileDir 
 ```
 This will give you something like
-' /home/you/.ipython'
+`{'location': u'C:\\Users\\me\\.ipython\\profile_dev'}`
+or for Unix
+`{'location': u'/home/you/.ipython/profile_default'}`
 
-So your path to copy the extensions will be
-'/home/you/.ipython/profile_default/static/custom'
+So your path to copy the extensions into will be
+`/home/you/.ipython/profile_default/static/custom`
 
-Finally, modify the file custom.js to load the desired extension.
+Finally, you have to add the extensions to the file `custom.js` in order to load them.
+This can be done best using the `require` statement. If not stated otherwise in the extension description, for example:
 ```javascript
-IPython.hotkeys=[];
-require(['/static/custom/helper-functions.js']) 
-
-initExtensions = function(){
-    require(['/static/custom/read-only.js'])
-    require(['/static/custom/breakpoint.js'])
-    require(['/static/custom/comment-uncomment.js'])
-//    require(['/static/custom/split-combine.js'])
-    require(['/static/custom/shift-tab.js'])
-    require(['/static/custom/nbconvert_button.js'])
-    }
- $([IPython.events]).on('app_initialized.NotebookApp',initExtensions);
+require(['/static/custom/styling/css-selector/main.js']) 
 ```
-
- 
