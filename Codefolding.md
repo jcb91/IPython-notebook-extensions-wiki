@@ -15,7 +15,7 @@ The unfolded code above can be folded like this:
 
 or this:
 
-https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_indent_folded_2.png
+![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_indent_folded_2.png)
 
 ### Bracked Folding
 For other languages like Javascript using brackets to designate code blocks. This works e.g. for Javascript in using the `%%javsscript` magic in a codecell.
@@ -27,7 +27,7 @@ Allows collapsing of Python code cells to a single comment line. This is useful 
 
 The code above can be folded like this:
 
-https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_indent_folded.png
+![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_firstline_folded.png)
 
 
 Installation
