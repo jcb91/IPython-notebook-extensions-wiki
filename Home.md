@@ -4,11 +4,13 @@ The repository is organized in several directories:
 
 | Directory              | Description                                                                       | 
 | ---------------------- |:---------------------------------------------------------------------------------:|
-| [publishing](wiki/publishing)             | publish notebooks on the web or convert to other formats                          |
-| [slidemode](wiki/slidemode)              | make slide creation for reveal.js easier                                          |
-| [styling] (wiki/styling)               | add custom styles to the notebook                                                 |
+| publishing             | publish notebooks on the web or convert to other formats                          |
+| slidemode              | make slide creation for reveal.js easier                                          |
+| styling                | add custom styles to the notebook                                                 |
 | testing                | alpha-level extension, not for general usage                                      |
-| [usability](wiki/usability)              | improve usability of the notebook                                                 |
+| usability              | improve usability of the notebook                                                 |
+| [usability/codefolding](Codefolding)              | Fold code blocks using Alt-F or clicking on gutter numbers     notebook                                                 |
+
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
