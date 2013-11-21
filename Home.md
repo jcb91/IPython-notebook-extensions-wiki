@@ -2,17 +2,21 @@ The IPython notebook allows extending the html frontend functionality (i.e. what
 
 The repository is organized in several directories: 
 
-| Directory              | Description                                                                       | 
-| ---------------------- |:---------------------------------------------------------------------------------:|
-| publishing             | publish notebooks on the web or convert to other formats                          |
-| slidemode              | make slide creation for reveal.js easier                                          |
-| styling                | add custom styles to the notebook                                                 |
-| testing                | alpha-level extension, not for general usage                                      |
-| usability              | improve usability of the notebook                                                 |
-| [usability/codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter   |
-| [usability/read-only.js](wiki/Readonly)  | Allow codecells to be set read-only, so no editing is possible   |
-| [usability/comment-uncomment.js](wiki/Comment-uncomment)  | Toggle comments in selected lines using Alt-C                                     |
-| [usability/shift-tab.js](wiki/Shift-tab)             | Assign "shift-tab" key to dedent tabilator                                                       |
+| File or Directory      | Description                                                                       | 
+| ---------------------- |---------------------------------------------------------------------------------|
+| [publishing/nbconvert-button](wiki/Nbconvert-button)	   | Add a button to call 'nbconvert --to html' for current the notebook      |
+| [publishing/printview-button](wiki/Printview-button)	   | Add a button to call 'nbconvert --to html' for current the notebook and display html in new browser tab                    |
+| publishing/gist_it                             |  Publish notebook as a gist  |
+| publishing/nbviewer_theme | |
+| slidemode              | Make slide creation for reveal.js easier                                          |
+| styling/css_selector   |                                              |
+| styling/zenmode        |                                              |
+| testing                | Alpha-level extensions, not for general use                                   |
+| [usability/codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
+| [usability/comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
+| [usability/linenumbers.js](wiki/Linenumbers) | Allow codecells to be set read-only, so no editing is possible   |
+| [usability/read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
+| [usability/shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
@@ -44,7 +48,19 @@ require(['/static/custom/styling/css-selector/main.js'])
 Your `custom.js` file might now look like this:
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
-    require(['custom/clean_start']);
+    require(['/static/custom/clean_start.js']);
     require(['/static/custom/styling/css-selector/main.js']);
 })
 ```
+## Troubleshooting
+If the extension does not work, here is how you can check what is wrong:
+1. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
+
+`http://127.0.0.1:8888/static/custom/custom.js`
+
+2. Verify the extension can be loaded by the IPython notebook, for example:
+
+`http://127.0.0.1:8888//static/custom/styling/css-selector/main.js`
+
+3. Check for error messages in the Javascipt console. 
+
