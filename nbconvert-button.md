@@ -8,3 +8,12 @@ import os; os.system(\"ipython nbconvert --to html ' + name + '\")
 ```
 Where `name` ist the name of the current IPython notebook. 
 This leaves the resulting static html file from your notebook in the directory where the notebook resides.
+
+## Installation
+Copy the `nbconvert_button.js` file, and add `require(['/static/custom/nbconvert_button.js'])` to `custom.js` in your profile's `/static/custom` directory, so it looks like this:
+```javascript
+$([IPython.events]).on('app_initialized.NotebookApp', function(){
+  //... 
+  require(['/static/custom/printview_button.js'])
+});
+```
