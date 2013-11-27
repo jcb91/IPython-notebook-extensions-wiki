@@ -32,11 +32,25 @@ The code above can be folded like this:
 
 Installation
 ============
-Copy the `codefolding` directory to you `/static/custom` directory of your IPython profile and add
+Copy the `codefolding` directory to a new `/static/custom/codefolding` directory of your IPython profile and add
 ```javascript
 require(['/static/custom/codefolding/codefolding.js'])
 ```
-to your `custom.js` file.
+to your `custom.js` file so it looks like this:
 
-If the codefolding does not always work correctly, try updating the codemirror component of IPython with the current Github master one. Codefolding is still in active development.
+```javascript
+$([IPython.events]).on('app_initialized.NotebookApp', function(){
+  //... 
+  require(['/static/custom/codefolding/codefolding.js'])
+});
+```
+
+## Internals
+You need the current master branch from Codemirror in order to get codefolding to work. This is still very much work-in-progress.
+
+The folding information is saved in the metadata of each codecell. The number of the folding start line (beginning with 0) is stored in an array: 
+```javascript
+cell.metadata.code_folding = [ 3, 20, 33 ]
+```
+When reloading the IPython notebook, the folding status is restored.
 
