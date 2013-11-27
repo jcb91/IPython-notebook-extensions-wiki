@@ -12,6 +12,7 @@ The repository is organized in several directories:
 | styling/css_selector   |                                              |
 | styling/zenmode        |                                              |
 | testing                | Alpha-level extensions, not for general use                                   |
+| [usability/breakpoints](wiki/Breakpoints)  | Allow setting of breakpoints to stop execution of notebook cells            |
 | [usability/codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
 | [usability/comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
 | [usability/linenumbers.js](wiki/Linenumbers) | Allow codecells to be set read-only, so no editing is possible   |
