@@ -14,6 +14,6 @@ Copy the `nbconvert_button.js` file, and add `require(['/static/custom/nbconvert
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
   //... 
-  require(['/static/custom/printview_button.js'])
+  require(['/static/custom/nbconvert_button.js'])
 });
 ```
