@@ -15,3 +15,7 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
   require(['/static/custom/printview_button.js'])
 });
 ```
+
+## Internals
+Newer IPython versions (> 2.0) will have the ability to operate with subdirectories in the URL.
+This extension takes this into account by checking the IPython notebook version and generating the correct path.
