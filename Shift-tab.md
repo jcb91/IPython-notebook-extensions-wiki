@@ -1,4 +1,4 @@
-The indent and dedent hotkeys for the IPython notebook are `Ctrl-[` and `Ctrl-]`. Unfortunately, for non-US keyboards it is somtimes difficult or even not possible to generate this key combination.
+The indent and dedent hotkeys for the IPython notebook are `Ctrl-[` and `Ctrl-]`. Unfortunately, for non-US keyboards it can be difficult or even impossible to generate this key combination.
 
 Therefore, the <b>shift-tab</b> extension allows using `Shift-tab` keys for dedent operation.
 
