@@ -17,8 +17,8 @@ or this:
 
 ![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_indent_folded_2.png)
 
-### Bracked Folding
-For other languages like Javascript using brackets to designate code blocks. This works e.g. for Javascript in using the `%%javsscript` magic in a codecell.
+### Bracket Folding
+Other languages like Javascript use brackets to designate code blocks. Codefolding is supported for Javascript in using the `%%javsscript` magic in a codecell.
 
 ### Firstline Comment Folding
 Allows collapsing of Python code cells to a single comment line. This is useful for long codecells. The algorithm simply looks for a comment in the first line and allows folding in the rest of the cell.
