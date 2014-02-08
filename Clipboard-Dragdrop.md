@@ -7,6 +7,9 @@ It adds two features:
 A demo video showing drag&drop of images is here:
 http://youtu.be/buAL1bTZ73c
 
+A demo showing copy&paste operating in Chrome here:
+http://youtu.be/iU9dNe4vMUY
+
 Installation
 =====
 Add `require(['/static/custom/clipboard_dragdrop.js'])` to your `custom.js` 
