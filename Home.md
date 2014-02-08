@@ -18,7 +18,7 @@ The repository is organized in several directories:
 | [usability/linenumbers.js](wiki/Linenumbers) | Allow codecells to be set read-only, so no editing is possible   |
 | [usability/read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
 | [usability/shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
-| [usability/clipboard_dragdrop.js](wiki/Clipboad-Dragdrop) | Add system clipboard and drag&drop             |
+| [usability/clipboard_dragdrop.js](wiki/Clipboard-Dragdrop) | Add system clipboard and drag&drop             |
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
