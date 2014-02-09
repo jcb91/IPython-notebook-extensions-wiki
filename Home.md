@@ -4,8 +4,9 @@ The repository is organized in several directories:
 
 | File or Directory      | Description                                                                       | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [publishing/nbconvert-button](wiki/Nbconvert-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook      |
-| [publishing/printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab                    |
+| [publishing/nbconvert-button](wiki/Nbconvert-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook (deprecated)     |
+| [publishing/printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab (deprecated)                   |
+| [publishing/printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
 | publishing/gist_it                             |  Publish notebook as a gist  |
 | publishing/nbviewer_theme | |
 | slidemode              | Make slide creation for reveal.js easier                                          |
