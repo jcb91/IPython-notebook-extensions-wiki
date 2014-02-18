@@ -20,7 +20,7 @@ The repository is organized in several directories:
 | [usability/read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
 | [usability/shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
 | [usability/chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
-| [usability/chrome_clipboard](wiki/drag-and-drop) | Add drag&drop of images into the notebook         |
+| [usability/drag-and-drop](wiki/drag-and-drop) | Add drag&drop of images into the notebook         |
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
