@@ -21,6 +21,7 @@ The repository is organized in several directories:
 | [usability/shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
 | [usability/chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
 | [usability/drag-and-drop](wiki/drag-and-drop) | Add drag&drop of images into the notebook         |
+| [usability/aspell](wiki/aspell) | Spellchecker using aspell |
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
