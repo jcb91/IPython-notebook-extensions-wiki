@@ -1,4 +1,5 @@
-** This is an experimental notebook extension **
+**This is an experimental notebook extension**
+
 This IPython notebook extension adds system clipboard actions. It allows cut/copy/paste operation of notebook cells and images. This works only for Chrome.
 
 | Hotkey | Function |
