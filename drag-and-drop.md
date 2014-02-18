@@ -1,4 +1,4 @@
-** This is an experimental notebook extension **
+**This is an experimental notebook extension**
 
 This IPython notebook extension allows dragging&dropping images from the desktop or other programs into a notebook. A new cell is created below the currently selected cell and the image is embedded.
 The notebook has been tested with Firefox and Chrome.
