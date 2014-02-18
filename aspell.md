@@ -44,3 +44,4 @@ Feedback and enhancements are welcome.
 The communication between the computer running `ipy-aspell.py` and the IPython notebook extension `ipy-aspell.js` running in your browser is realized using websockets at port 8989.
 
 The notebook extensions sends each word to be spell checked using a JSON string `"text":word, "line": i, "start":start, "end":end, "id":cell.cell_id` and receives back antother JSON string `"text":curWord, "line": cur.line, "start":start, "end":end, "id":cell.cell_id`.
+If `curWord` is returned as `true` from aspell, then it is not a valid word in the dictionary and will be marked using CodeMirror`s `markText()`. The marking can be cleared either by typing on or by clicking on the trashcan toolbar symbol.
