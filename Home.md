@@ -27,7 +27,11 @@ The repository is organized in several directories:
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
 
 ## Finding your profile directory
-You can find out your profile directory by starting the IPython notebook and executing
+You can find out your profile directory directly from the commandline
+```
+ipython locate
+```
+Or by starting the IPython notebook and executing
 ```python
 import IPython
 ip=IPython.get_ipython()
