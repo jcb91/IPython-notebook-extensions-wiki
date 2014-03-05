@@ -16,7 +16,7 @@ The repository is organized in several directories:
 | [usability/breakpoints](wiki/Breakpoints)  | Allow setting of breakpoints to stop execution of notebook cells            |
 | [usability/codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
 | [usability/comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
-| [usability/linenumbers.js](wiki/Linenumbers) | Allow codecells to be set read-only, so no editing is possible   |
+| [usability/linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
 | [usability/read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
 | [usability/shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
 | [usability/chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
