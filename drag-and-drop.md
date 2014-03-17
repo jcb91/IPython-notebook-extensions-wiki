@@ -42,7 +42,9 @@ def start_drag_and_drop():
 
 start_drag_and_drop()
 ```
-Link: ![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/usability/dragdrop/50-start-drag-and-drop.ipy)
+Link: [50-startup-drag-and-drop.ipy](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/usability/dragdrop/50-start-drag-and-drop.ipy "50-startup-drag-and-drop.ipy")
+
+
 
 ## Internals
 The image will be uploaded to the server where the notebook is running and into a directory called `images`. This means, the image is not copied to the notebook itself, it will only be linked to. The markdown cell in the notebook will contain this tag:
