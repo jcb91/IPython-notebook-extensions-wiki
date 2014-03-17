@@ -62,6 +62,13 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
     require(['/static/custom/styling/css-selector/main.js']);
 })
 ```
+It is also possible to add additional locations where extensions can be placed.
+This can be configured in the `ipython_notebook_config.py` file. To find out if
+you have configured an extra path type:
+```python
+ip.config.NotebookApp.extra_static_paths
+```
+
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
 1. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
