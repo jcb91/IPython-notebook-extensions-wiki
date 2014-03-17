@@ -5,7 +5,7 @@ A demo video showing drag&drop of images is here:
 http://youtu.be/buAL1bTZ73c
 
 ## Installation
-1. Copy the file `drag-and-drop.js` to your `/static/custom/` directory of your IPython profile and add
+ -  Copy the file `drag-and-drop.js` to your `/static/custom/` directory of your IPython profile and add
 ```javascript
 require(['/static/custom/dragdrop/drag-and-drop.js'])
 ```
@@ -17,13 +17,13 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
   require(['/static/custom/drag-and-drop.js'])
 });
 ```
-2. Configure the port
+ - Configure the port
 Edit you `ipython_notebook_config.py` file in your profile to include the line:
 `c.DragDrop.port = 8901`
 
 This will tell the websocket server on which port to communicate.
 
-3. Start websocket service
+ - Start websocket service
 Add a startup file to you startup directory, called `50-start-drag-and-drop.ipy`:
 
 ```python
