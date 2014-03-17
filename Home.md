@@ -22,7 +22,7 @@ The repository is organized in several directories:
 | [usability/chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
 | [usability/drag-and-drop](wiki/drag-and-drop) | Allow dragging of images into a notebook         |
 | [usability/aspell](wiki/aspell) | Spellchecker using aspell |
-| [usability/toggle_codecells](wiki/toggle_codecells) | Hide all codecells in a notebook      |
+| [usability/hide_input_all](wiki/toggle_codecells) | Hide all codecells in a notebook      |
 
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
