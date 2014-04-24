@@ -9,7 +9,7 @@ The repository is organized in several directories:
 | [publishing/printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
 | publishing/gist_it                             |  Publish notebook as a gist  |
 | publishing/nbviewer_theme | |
-| [publishing/htmltools/js_highlight.py](wiki/js_highlight_py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
+| [publishing/htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
 | slidemode              | Make slide creation for reveal.js easier                                          |
 | styling/css_selector   |                                              |
 | styling/zenmode        |                                              |
