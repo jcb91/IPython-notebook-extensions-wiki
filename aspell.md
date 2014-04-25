@@ -19,23 +19,23 @@ Now install the IPython notebook extension:
 Add `require(['/static/custom/aspell/ipy-aspell.js'])` to your `custom.js` 
 Copy the directory `aspell` to your `/static/custom/` directory of your IPython profile and add
 ```javascript
-require(['/static/custom/aspell/ipy-aspell.js'])
+require(['/static/custom/aspell/ipy-aspell.js']);
 ```
 to your `custom.js` file so it looks like this:
 
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
-  //... 
-  require(['/static/custom/aspell/ipy-aspell.js'])
+    //...
+    require(['/static/custom/aspell/ipy-aspell.js']);
 });
 ```
 
 If the computer `ipy-aspell.py` is running on is als running the IPython notebook server, 
 add the line 
-`var wsUri = "ws://" + document.domain + ":8889/"+ "websocket"`
+`var wsUri = "ws://" + document.domain + ":8889/"+ "websocket";`
 to `ipy-aspell.js`.
 If you use another computer, pleas add
-`var wsUri = "ws://" + "**my computer name**" + ":8889/"+ "websocket"`
+`var wsUri = "ws://" + "**my computer name**" + ":8889/"+ "websocket";`
 
 This extension needs some testing. Also, it does not do much error checking for now.
 Feedback and enhancements are welcome. 
