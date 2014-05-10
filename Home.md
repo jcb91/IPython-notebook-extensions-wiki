@@ -26,7 +26,7 @@ The repository is organized in different categories:
 | [linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
 | [read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
 | [runtools](wiki/Runtools) | Add toolbar buttons for additional code execution options   |
-
+| [search.js](wiki/Search) | Search notebook for expressions                      |
 | [shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
 
 ##Publishing
