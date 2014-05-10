@@ -5,7 +5,7 @@ The repository is organized in different categories:
 
 | Name | Description |
 |------------|-------------|
-| usability  | Added functionality for easier usage of the notebook |
+| usability  | Additional functionality for the notebook            |
 | publishing | Getting your notebooks out in the wild               |
 | styling    | Styling schemes for different looks of the notebook  |
 | slidemode  | Slideshow creation                                   |
