@@ -1,31 +1,56 @@
 The IPython notebook allows extending it's functionality (i.e. what you do in the Browser) using extensions written in Javascript. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
-The repository is organized in several directories: 
+#Overview
+The repository is organized in different categories: 
+
+| Name | Description |
+|------------|-------------|
+| usability  | Added functionality for easier usage of the notebook |
+| publishing | Getting your notebooks out in the wild               |
+| styling    | Styling schemes for different looks of the notebook  |
+| slidemode  | Slideshow creation                                   |
+| testing    | Extensions in a early stage                          |
+
+##Usability
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [publishing/nbconvert-button](wiki/Nbconvert-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook (deprecated)     |
-| [publishing/printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab (deprecated)                   |
-| [publishing/printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
-| publishing/gist_it                             |  Publish notebook as a gist  |
-| publishing/nbviewer_theme | |
-| [publishing/htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
-| slidemode              | Make slide creation for reveal.js easier                                          |
+| [breakpoints](wiki/Breakpoints)  | Allow setting of breakpoints to stop execution of notebook cells            |
+| [codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
+| [comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
+| [help_panel.js](wiki/help_panel) | Display panel with hotkey help |
+| [linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
+| [read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
+| [shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
+| [chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
+| [drag-and-drop](wiki/drag-and-drop) | Allow dragging of images into a notebook         |
+| [aspell](wiki/aspell) | Spellchecker using aspell |
+| [hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
+
+##Publishing
+
+| File or Directory      | Description                                            | 
+| ---------------------- |---------------------------------------------------------------------------------|
+| [nbconvert-button](wiki/Nbconvert-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook (deprecated)     |
+| [printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab (deprecated)                   |
+| [printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
+| gist_it                             |  Publish notebook as a gist  |
+| nbviewer_theme | |
+| htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
+
+##Styling
+
+| File or Directory      | Description                                  | 
+| ---------------------- |----------------------------------------------|
 | styling/css_selector   |                                              |
 | styling/zenmode        |                                              |
-| testing                | Alpha-level extensions, not for general use                                   |
-| [usability/breakpoints](wiki/Breakpoints)  | Allow setting of breakpoints to stop execution of notebook cells            |
-| [usability/codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
-| [usability/comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
-| [usability/help_panel.js](wiki/help_panel) | Display panel with hotkey help |
-| [usability/linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
-| [usability/read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
-| [usability/shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
-| [usability/chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
-| [usability/drag-and-drop](wiki/drag-and-drop) | Allow dragging of images into a notebook         |
-| [usability/aspell](wiki/aspell) | Spellchecker using aspell |
-| [usability/hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
+
+##Slidemode
+
+| File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
+| slidemode              | Make slide creation for reveal.js easier                                          |
+
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
 
