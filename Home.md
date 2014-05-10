@@ -1,8 +1,8 @@
-The IPython notebook allows extending the html frontend functionality (i.e. what you do in the Browser) using extensions written in Javascript. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
+The IPython notebook allows extending it's functionality (i.e. what you do in the Browser) using extensions written in Javascript. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
 The repository is organized in several directories: 
 
-| File or Directory      | Description                                                                       | 
+| File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
 | [publishing/nbconvert-button](wiki/Nbconvert-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook (deprecated)     |
 | [publishing/printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab (deprecated)                   |
@@ -25,7 +25,7 @@ The repository is organized in several directories:
 | [usability/drag-and-drop](wiki/drag-and-drop) | Allow dragging of images into a notebook         |
 | [usability/aspell](wiki/aspell) | Spellchecker using aspell |
 | [usability/hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
-
+| ---------------------- |---------------------------------------------------------------------------------|
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
 
