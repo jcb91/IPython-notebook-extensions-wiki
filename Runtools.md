@@ -8,7 +8,16 @@ Runtools provide additional execution modes for code cells:
 * Execute marked codecells
 * Stop execution 
 
+Description
+===========
+The *runtools* extension adds two button groups to the main toolbar:
 ![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/runtools.png)
+
+Code execution buttons:
+![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/runtools_execute.png)
+
+Cell markers:
+![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/runtools_marker.png)
 
 
 Installation
