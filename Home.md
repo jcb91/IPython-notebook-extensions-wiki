@@ -5,11 +5,11 @@ The repository is organized in different categories:
 
 | Name | Description |
 |------------|-------------|
-| usability  | Additional functionality for the notebook            |
-| publishing | Getting your notebooks out in the wild               |
-| styling    | Styling schemes for different looks of the notebook  |
-| slidemode  | Slideshow creation                                   |
-| testing    | Extensions in a early stage                          |
+| [usability](##Usability)  | Additional functionality for the notebook            |
+| [publishing](##Publishing) | Getting your notebooks out in the wild               |
+| [styling](##Styling)    | Styling schemes for different looks of the notebook  |
+| [slidemode](##Slidemode)  | Slideshow creation                                   |
+| [testing](##Testing)    | Extensions in a early stage                          |
 
 ##Usability
 
