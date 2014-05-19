@@ -53,6 +53,16 @@ The repository is organized in different categories:
 | ---------------------- |---------------------------------------------------------------------------------|
 | slidemode              | Make slide creation for reveal.js easier                                          |
 
+##Testing
+
+| File or Directory      | Description                                            | 
+| ---------------------- |---------------------------------------------------------------------------------|
+| hierarchical_collapse              |  Adds a button to hide all cells below the selected heading |
+| history              |   |
+| swc             |   |
+| cellstate       |   |
+
+
 # General installation instruction
 Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
 
