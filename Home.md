@@ -24,6 +24,7 @@ The repository is organized in different categories:
 | [help_panel.js](wiki/help_panel) | Display panel with hotkey help |
 | [hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
 | [linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
+| [navigation-hotkeys.js](wiki/navigation_hotkeys) | Change hotkeys for navigation in notebook  |
 | [read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
 | [runtools](wiki/Runtools) | Add toolbar buttons for additional code execution options   |
 | [search.js](wiki/Search) | Search notebook for expressions                      |
