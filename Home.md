@@ -58,7 +58,7 @@ The repository is organized in different categories:
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| hierarchical_collapse              |  Adds a button to hide all cells below the selected heading |
+| [hierarchical_collapse](wiki/hierarchical_collapse)  |  Adds a button to hide all cells below the selected heading |
 | history              |   |
 | swc             |   |
 | cellstate       |   |
