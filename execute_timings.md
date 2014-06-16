@@ -15,10 +15,10 @@ The timings area can be hide by double clicking on it or using the option in the
 ![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/executeTimings/wiki-images/execution-timings-menu.png)
 
 ## Internals
-To be sure that the kernel is run intentionally by executing a codecell, codecell.prototype.execute() is overload and a new event 'ExecuteCell.ExecuteTime' is fired, that this extension catches to display the start time. We use the event 'status_idle.Kernel' to know when the kernel finished the execution of the cell. 
+To be sure that the kernel is run intentionally by executing a codecell, codecell.prototype.execute() is overloaded and a new event 'ExecuteCell.ExecuteTime' is fired, that this extension catches to display the start time. We use the event 'status_idle.Kernel' to know when the kernel finished the execution of the cell. 
 
 ## Installation
-Copy the `executeTime.js` file, and add `require(['/static/custom/executeTime.js'])` to `custom.js` in your profile's `/static/custom` directory, so it looks like this:
+Copy `executeTime.{js,css}`, and add `require(['/static/custom/executeTime.js'])` to `custom.js` in your profile's `/static/custom` directory, so it looks like this:
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
   //... 
