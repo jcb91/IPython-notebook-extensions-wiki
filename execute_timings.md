@@ -1,13 +1,14 @@
 # Wiki page in progress
 
-This extension allows hiding all codecells of a notebook. This can be achieved by clicking on the button toolbar:
+This extension displays when the last execution of
+a cell occurred and how long it took. This information is displayed in a box attached at the bottom of the input area. 
+
+![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/master/wiki-images/execution-timings-display.png)
+
+It can be hide by double clicking on the box or using the option in the cell menu. Clicking on the "Toggle codecell display" toolbar button hides all codecells:
+
+
 ![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/master/wiki-images/execution-timings-menu.png)
-
-Typically, all codecells are shown with their corresponding output:
-![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/hide_input_all_show.png)
-
-Clicking on the "Toggle codecell display" toolbar button hides all codecells:
-![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/hide_input_all_hide.png)
 
 ## Internals
 The codecell hiding state is stored in the metadata `IPython.notebook.metadata.hide_input`.
