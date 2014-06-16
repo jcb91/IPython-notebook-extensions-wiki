@@ -25,4 +25,4 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
 ```
 
 ## TODO
-The timings information could be stored into the notebook and displayed when it is loaded.
+The timings information could be stored into the notebook and displayed when it is loaded. Where these information should be stored is still to be decided (maybe in the metadata).
