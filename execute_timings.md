@@ -1,7 +1,7 @@
 # Wiki page in progress
 
 This extension allows hiding all codecells of a notebook. This can be achieved by clicking on the button toolbar:
-![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/toggle_codecells.png)
+![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/master/wiki-images/execution-timings-menu.png)
 
 Typically, all codecells are shown with their corresponding output:
 ![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/hide_input_all_show.png)
