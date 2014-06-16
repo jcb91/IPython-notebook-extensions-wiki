@@ -1,5 +1,3 @@
-# Wiki page in progress
-
 This extension displays when the last execution of a cell occurred and how long it took. 
 
 ## Display
@@ -25,3 +23,6 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
   require(['/static/custom/executeTime.js'])
 });
 ```
+
+## TODO
+The timings information could be stored into the notebook and displayed when it is loaded.
