@@ -3,12 +3,12 @@
 This extension displays when the last execution of
 a cell occurred and how long it took. This information is displayed in a box attached at the bottom of the input area. 
 
-![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/master/wiki-images/execution-timings-display.png)
+![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/executeTimings/wiki-images/execution-timings-box.png)
 
 It can be hide by double clicking on the box or using the option in the cell menu. Clicking on the "Toggle codecell display" toolbar button hides all codecells:
 
 
-![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/master/wiki-images/execution-timings-menu.png)
+![](https://github.com/jcjaskula/IPython-notebook-extensions/raw/executeTimings/wiki-images/execution-timings-menu.png)
 
 ## Internals
 The codecell hiding state is stored in the metadata `IPython.notebook.metadata.hide_input`.
