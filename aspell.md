@@ -9,10 +9,10 @@ http://www.youtube.com/watch?v=yk5ID5SAlLw
 ## Installation
 * First you need to have the program `aspell` installed on a computer. 
 * Next, you need the `aspell-python` package (https://pypi.python.org/pypi/aspell-python).
-* Finally, start `ipy-aspell-server.py`. If you want to run it in background, use something like `nohup python ipy-aspell-server.py &`
+* Finally, start `ipy-aspell-server.py`. If you want to run it in background, use something like `nohup python ipy-aspell-server.py &`. 
 
 For now the spell check language is configured to english in the line 
-`s = aspell.Speller('lang', 'en')` of `ipy-aspell.py`.
+`s = aspell.Speller('lang', 'en')` of `ipy-aspell-server.py`.
 
 Now install the IPython notebook extension:
 
@@ -39,6 +39,10 @@ If you use another computer, pleas add
 
 This extension needs some testing. Also, it does not do much error checking for now.
 Feedback and enhancements are welcome. 
+## Note
+As all text to be spellchecked is transferred over the network unencrypted, this can be a major security risk. 
+Also, someone might modify the server program `ipy-aspell-server.py` to spy on you.
+Therefore, you should only use the spellchecker when it running on your local machine or setup.
 
 ## Internals
 The communication between the computer running `ipy-aspell.py` and the IPython notebook extension `ipy-aspell.js` running in your browser is realized using websockets at port 8989.
