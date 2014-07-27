@@ -40,7 +40,7 @@ The repository is organized in different categories:
 | [printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
 | gist_it                             |  Publish notebook as a gist  |
 | nbviewer_theme | |
-| htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
+| [htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
 
 ##Styling
 
@@ -112,13 +112,10 @@ ip.config.NotebookApp.extra_static_paths
 
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
+
 1. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
-
-`http://127.0.0.1:8888/static/custom/custom.js`
-
+    `http://127.0.0.1:8888/static/custom/custom.js`
 2. Verify the extension can be loaded by the IPython notebook, for example:
-
-`http://127.0.0.1:8888//static/custom/styling/css-selector/main.js`
-
-3. Check for error messages in the Javascipt console. 
+    `http://127.0.0.1:8888//static/custom/styling/css-selector/main.js`
+3. Check for error messages in the JavaScript console. 
 
