@@ -13,6 +13,14 @@ It will be displayed as:
 a = 1.23
 ```
 
+## Further examples
+Before rendering the markdown cell:
+![before](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/python-markdown-pre.png)
+
+After rendering the markdown cell:
+![after](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/python-markdown-post.png)
+
+
 ** Caution: ** There is no restriction in the expression you can embedd in `{{ }}`. Be careful as you might crash your browser if you return too large datasets.
 
 ## Internals
