@@ -66,14 +66,41 @@ The repository is organized in different categories:
 
 
 # General installation instruction
-Extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the static/custom directory of your IPython profile and adding it to `custom.js`. 
+Notebook extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the `nbextensions` directory of your local IPython directory (aka IPYTHONDIR) and calling it either directly in a notebook or adding it to the `custom.js` in your local profile.
 
-## Finding your profile directory
-You can find out your profile directory directly from the commandline
+## Installing from a URL
+The easiest way to install an extension is directly from IPython:
+```python
+import IPython
+IPython.html.nbextensions.install_nbextension('https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/gist.js')
+```
+You can verify if your extension has been installed by using
+```python
+IPython.html.nbextensions.check_nbextension('gist.js')
+```
+
+## Manual installation
+First you need to find your local IPython directory. This can be done from command line:
 ```
 ipython locate
 ```
-Or by starting the IPython notebook and executing
+or in IPython by executing:
+```python
+import IPython
+ip=IPython.get_ipython()
+ip.ipython_dir
+```
+Now copy your notebook extension files in the `nbextensions` subdirectoy.
+
+## Interactive loading of a notebook extension
+Once the notebook extension has been installed, they can be loaded like this:
+```javascript
+%%javascript
+IPython.load_extensions('gist');
+```
+## Automatic loading of a notebook extension
+If you want an extension to be always loaded, you need to call it in your local `custom.js` file.
+First locate your profile directory:
 ```python
 import IPython
 ip=IPython.get_ipython()
@@ -84,26 +111,28 @@ This will give you something like
 or for Unix
 `{'location': u'/home/you/.ipython/profile_default'}`
 
-So your path to copy the extensions into will be
-`/home/you/.ipython/profile_default/static/custom`
+So your file will be located here:
+`/home/you/.ipython/profile_default/static/custom/custom.js`
 
-## Adding the extension
-Next, you copy the extension file or complete directory to the custom directory.
+This is where you add a line to call your notebook extension.
+How to do this is described in the next section.
 
-Finally, you have to add the extensions to the file `custom.js` in order to load them.
-This can be done best using the `require` command:
+## Adding the extension to custom.js
+Your `custom.js` should look like this:
 ```javascript
-require(['/static/custom/styling/css-selector/main.js']) 
+// activate extensions only after Notebook is initialized
+require(["base/js/events"], function (events) {
+    events.on("app_initialized.NotebookApp", function () {
+    /* load your extension here */
+    IPython.load_extensions('gist');
+    });
+});
 ```
+In the example above, the `toc.js` is loaded. Note: You don't need to specify the `.js` file extension.
 
-Your `custom.js` file might now look like this:
-```javascript
-$([IPython.events]).on('app_initialized.NotebookApp', function(){
-    require(['/static/custom/clean_start.js']);
-    require(['/static/custom/styling/css-selector/main.js']);
-})
-```
-It is also possible to add additional locations where extensions can be placed.
+A template `custom.js` file is geven here : [ipython-contrib/custom.example.js](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/custom.example.js)
+
+It is also possible to add additional locations where extensions or the `custom.js` file can be placed.
 This can be configured in the `ipython_notebook_config.py` file. To find out if
 you have configured an extra path type:
 ```python
@@ -112,10 +141,10 @@ ip.config.NotebookApp.extra_static_paths
 
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
-
-1. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
+1. Clear your browser cache or start a private browser tab.
+2. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
     `http://127.0.0.1:8888/static/custom/custom.js`
-2. Verify the extension can be loaded by the IPython notebook, for example:
-    `http://127.0.0.1:8888//static/custom/styling/css-selector/main.js`
+3. Verify the extension can be loaded by the IPython notebook, for example:
+    `http://127.0.0.1:8888/nbextensions/gist.js`
 3. Check for error messages in the JavaScript console. 
 
