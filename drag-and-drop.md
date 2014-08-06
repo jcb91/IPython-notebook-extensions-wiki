@@ -14,6 +14,7 @@ From IPython simply call
 ```python
 import IPython
 IPython.html.nbextensions.install_nbextension('https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/usability/dragdrop/drag-and-drop.js')
+```
 
 Then load the extension from within the IPyton notebook:
 ```javascript
