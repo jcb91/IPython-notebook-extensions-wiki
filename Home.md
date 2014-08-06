@@ -141,6 +141,7 @@ ip.config.NotebookApp.extra_static_paths
 
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
+
 1. Clear your browser cache or start a private browser tab.
 2. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
     `http://127.0.0.1:8888/static/custom/custom.js`
