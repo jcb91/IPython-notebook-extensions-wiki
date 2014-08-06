@@ -18,7 +18,7 @@ IPython.html.nbextensions.install_nbextension('https://github.com/ipython-contri
 Then load the extension from within the IPyton notebook:
 ```javascript
 %%javascript
-IPython.load_extensions('gist');
+IPython.load_extensions('drag-and-drop');
 ```
 Alternatively, you can add the load command to your `custom.js`.
 
