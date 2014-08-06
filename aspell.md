@@ -1,3 +1,8 @@
+**There is a Javascript-only spellchecker available now:**
+[Installation](https://www.youtube.com/watch?v=Km3AtRynWFQ)
+[Demonstration](https://www.youtube.com/watch?v=o4xCp3b4oCw)
+
+### Aspell-based spell checker
 This IPython notebook extension allows spellchecking using aspell (http://aspell.net/).
 It allows spell checking as you type in markdown cells or on demand using a toolbar button for any cell type.
 
