@@ -28,7 +28,8 @@ Also, images in markdown will be removed due to the HTML sanitizer after a reloa
 ## Installation
 Copy `python-markdown.js` to the `nbextensions` directory of your IPython notebook server.
 Then load the using
-```%javascript
+```javascript
+%javascript
 IPython.load_extensions('usability/python-markdown')
 ```
 You can add the `IPython.load_extensions('usability/python-markdown')` call to your local `custom.js` file to have the extension automatically loaded. See the IPython documentation or the main make of this Wiki for details.
