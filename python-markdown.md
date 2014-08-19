@@ -26,6 +26,8 @@ After rendering the markdown cell:
 Also, images in markdown will be removed due to the HTML sanitizer after a reload.
 
 ## Installation
+There are different versions of this extension for the 2.x or 3.x version of IPython. Please make sure you use the correct one by selecting the `2.x` or `master` branch in the repository.
+
 Copy `python-markdown.js` to the `nbextensions` directory of your IPython notebook server.
 Then load the using
 ```javascript
