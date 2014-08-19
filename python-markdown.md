@@ -23,7 +23,7 @@ After rendering the markdown cell:
 
 **Caution:** There is no restriction in the expression you can embedd in `{{ }}`. Be careful as you might crash your browser if you return too large datasets.
 
-Also, graphics in markdown will be removed due to the HTML sanitizer.
+Also, images in markdown will be removed due to the HTML sanitizer after a reload.
 
 ## Installation
 Copy `python-markdown.js` to the `nbextensions` directory of your IPython notebook server.
