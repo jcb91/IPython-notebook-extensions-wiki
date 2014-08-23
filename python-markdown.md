@@ -36,8 +36,8 @@ IPython.load_extensions('python-markdown')
 ```
 You can add the `IPython.load_extensions('python-markdown')` call to your local `custom.js` file to have the extension automatically loaded. See the IPython documentation or the main make of this Wiki for details.
 
-In order to have `nbconvert` show the preprocessed output, copy the `pymdpreprocessor.py` file to a location in your `PYTHONPATH`and add the following line to your `ipython_nbconvert_config.py` configuration file:
-c.Exporter.preprocessors = [ 'pymdpreprocessor.PyMarkdownPreprocessor' ]
+In order to have `nbconvert` show the preprocessed output, copy the `pymdpreprocessor.py` file to a location in your `PYTHONPATH`and add or extend the following line to your `ipython_nbconvert_config.py` configuration file:
+`c.Exporter.preprocessors = [ 'pymdpreprocessor.PyMarkdownPreprocessor' ]`
 
 ## Internals
 The extension overrides the `textcell.MarkdownCell.prototype.render` function and searches for a Python expression enclosed in double curly braced `{{ <expr> }}`. It then executes the expression and replaces it with the result returned from Python, embedded in a `<span>` tag.
