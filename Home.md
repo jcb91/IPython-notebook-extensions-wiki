@@ -146,9 +146,8 @@ If the extension does not work, here is how you can check what is wrong:
 1. Clear your browser cache or start a private browser tab.
 2. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
     `http://127.0.0.1:8888/static/custom/custom.js`
-    (as opposed to `../site-packages/IPython/html/static/custom/custom.js`, 
-    which may the only `custom.js` loaded if you are using a virtualenv)
+    <br/>_(as opposed to `../site-packages/IPython/html/static/custom/custom.js`,_
+    <br/>_which may the only `custom.js` loaded if you are using a virtualenv)_
 3. Verify the extension can be loaded by the IPython notebook, for example:
     `http://127.0.0.1:8888/nbextensions/gist.js`
 3. Check for error messages in the JavaScript console. 
-
