@@ -28,6 +28,7 @@ The repository is organized in different categories:
 | [navigation-hotkeys.js](wiki/navigation_hotkeys) | Change hotkeys for navigation in notebook  |
 | [python-markdown.js](wiki/python-markdown) | Display Python variables in markdown  |
 | [read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
+| [rubberband](wiki/Rubberband) | Multi-cell selection tool   |
 | [runtools](wiki/Runtools) | Add toolbar buttons for additional code execution options   |
 | [search.js](wiki/Search) | Search notebook for expressions                      |
 | [shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
