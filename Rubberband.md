@@ -2,7 +2,9 @@ Multi-Cell selection using a rubberband
 
 Description
 ===========
-The *rubberband* extension allows selecting multiple cells. It is still a work-in-progress.
+The *rubberband* extension allows selecting multiple cells. 
+Short video of rubberband extension. Works nicely here:
+[![screenshot](https://cloud.githubusercontent.com/assets/2445216/4668769/b6dd5b72-5567-11e4-9b55-558da6da027c.jpg)](http://youtu.be/TOPfWhqa3oI)
 
 Two other extensions make use of this feature: exercise and chrome_clipboard.
 
