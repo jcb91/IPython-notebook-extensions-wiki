@@ -1,9 +1,9 @@
-This extension adds codefolding functionality from CodeMirror to a codecell. This functionality requires the current master version of IPython or installing a more recent version of CodeMirror for 1.x versions of IPython. 
+This extension adds codefolding functionality from CodeMirror to a codecell.
 
 After clicking on the gutter (left margin of codecell) or typing `Alt+F`, the code gets folded. See the examples below. The folding status is saved in the cell metadata of the notebook, so reloading of a notebook will restore the folding view.
 
 ## Supported modes:
-Three different folding modes are supported.
+Three different folding modes are supported:
 
 ### Indent Folding
 Python-style code folding, detetects indented code.
@@ -36,7 +36,7 @@ Copy the `codefolding` directory to a new `/static/custom/codefolding` directory
 ```javascript
 require(['/static/custom/codefolding/codefolding.js'])
 ```
-to your `custom.js` file so it looks like this:
+to your `custom.js` file so it looks like this (in IPython 2.x):
 
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
@@ -45,7 +45,6 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
 });
 ```
 If you use the current master branch of IPython from GitHub, this is all you need to do.
-For the 1.x versions of IPython, you need to download a recent version of Codemirror from http://codemirror.net and install it in your local profile under `/static/custom/components/codemirror`.
 
 ## Internals
 You need the current master branch from Codemirror in order to get codefolding to work. This is still very much work-in-progress.
