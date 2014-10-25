@@ -4,6 +4,7 @@ Description
 ===========
 The *rubberband* extension allows selecting multiple cells. Cells are selected by pressing `shift` or `ctrl`+`shift` + left mouse button click and dragging the rubber band over the cells.
 
+
 | key | action |
 |---------------|
 | shift + left mouse button | select cells that are currently touched by the rubberband |
