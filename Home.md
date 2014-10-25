@@ -1,5 +1,18 @@
 The IPython notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
+IPython version support
+=======================
+
+| Version | Description |
+|------------|-------------|
+| 1.x | not supported |
+| 2.x | checkout 2.x branch |
+| 3.x | checkout 3.x branch |
+
+There are different branches of the notebook extensions in this repository.
+Please make sure you use the branch corresponding to your IPython version.
+Not all extensions may be available in 2.x and 3.x.
+
 #Overview
 The repository is organized in different categories: 
 
@@ -120,6 +133,19 @@ This is where you add a line to call your notebook extension.
 How to do this is described in the next section.
 
 ## Adding the extension to custom.js
+
+## For version 2.x
+Your `custom.js` should look like this:
+```javascript
+// activate extensions only after Notebook is initialized
+require(["base/js/events"], function (events) {
+$([IPython.events]).on("app_initialized.NotebookApp", function () {
+    /* load your extension here */
+    IPython.load_extensions('gist');
+    });
+});
+```
+## For version 3.x
 Your `custom.js` should look like this:
 ```javascript
 // activate extensions only after Notebook is initialized
@@ -130,6 +156,7 @@ require(["base/js/events"], function (events) {
     });
 });
 ```
+
 In the example above, the `toc.js` is loaded. Note: You don't need to specify the `.js` file extension.
 
 A template `custom.js` file is geven here : [ipython-contrib/custom.example.js](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/custom.example.js)
