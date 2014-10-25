@@ -3,7 +3,7 @@
 * [Installation](https://www.youtube.com/watch?v=Km3AtRynWFQ)
 * [Demonstration](https://www.youtube.com/watch?v=o4xCp3b4oCw)
 
-It is recommended to use the above spellchecker instead of the aspell-base one.
+It is recommended to use the above spellchecker instead of the aspell-based one.
 
 ### Aspell-based spell checker
 This IPython notebook extension allows spellchecking using aspell (http://aspell.net/).
