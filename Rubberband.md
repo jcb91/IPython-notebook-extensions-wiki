@@ -5,7 +5,7 @@ Description
 The *rubberband* extension allows selecting multiple cells. Cells are selected by pressing `shift` or `ctrl`+`shift` + left mouse button click and dragging the rubber band over the cells.
 
 * `shift` + left mouse button : select cells that are currently touched by the rubberband
-* `ctrl` + `shift + left mouse button : select cells that were touched by the rubberband
+* `ctrl` + `shift` + left mouse button : select cells that were touched by the rubberband
 
 The `ctrl`+`shift` action is useful when scrolling inside the notebook. Scrolling is activated when the mouse reaches the upper or lower boundary of the notebook area. For now, the mouse has to be moved to achieve continuous scrolling.
 
