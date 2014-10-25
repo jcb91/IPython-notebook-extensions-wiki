@@ -3,6 +3,8 @@
 * [Installation](https://www.youtube.com/watch?v=Km3AtRynWFQ)
 * [Demonstration](https://www.youtube.com/watch?v=o4xCp3b4oCw)
 
+It is recommended to use the above spellchecker instead of the aspell-base one.
+
 ### Aspell-based spell checker
 This IPython notebook extension allows spellchecking using aspell (http://aspell.net/).
 It allows spell checking as you type in markdown cells or on demand using a toolbar button for any cell type.
@@ -27,7 +29,7 @@ Copy the directory `aspell` to your `/static/custom/` directory of your IPython 
 ```javascript
 require(['/static/custom/aspell/ipy-aspell.js']);
 ```
-to your `custom.js` file so it looks like this:
+to your `custom.js` file so it looks like this (IPython 2.x version):
 
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
