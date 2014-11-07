@@ -32,16 +32,16 @@ The code above can be folded like this:
 
 Installation
 ============
-Copy the `codefolding` directory to a new `/static/custom/codefolding` directory of your IPython profile and add
+Copy the `codefolding` directory to a new `/nbextensions/usability/codefolding` directory of your IPython profile and add
 ```javascript
-require(['/static/custom/codefolding/codefolding.js'])
+require(['/nbextensions/usability/codefolding/codefolding.js'])
 ```
 to your `custom.js` file so it looks like this (in IPython 2.x):
 
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
   //... 
-  require(['/static/custom/codefolding/codefolding.js'])
+  require(['/nbextensions/usability/codefolding/codefolding.js'])
 });
 ```
 If you use the current master branch of IPython from GitHub, this is all you need to do.
