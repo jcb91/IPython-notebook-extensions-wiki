@@ -32,19 +32,14 @@ The code above can be folded like this:
 
 Installation
 ============
-Copy the `codefolding` directory to a new `/nbextensions/usability/codefolding` directory of your IPython profile and add
+Copy the `codefolding` directory to a new `/nbextensions/usability/codefolding` directory of your local `.ipython` directory.
+Then load the extension from within the IPyton notebook:
 ```javascript
-require(['/nbextensions/usability/codefolding/codefolding.js'])
+%%javascript
+IPython.load_extensions('usability/codefolding/codefolding.js');
 ```
-to your `custom.js` file so it looks like this (in IPython 2.x):
 
-```javascript
-$([IPython.events]).on('app_initialized.NotebookApp', function(){
-  //... 
-  require(['/nbextensions/usability/codefolding/codefolding.js'])
-});
-```
-If you use the current master branch of IPython from GitHub, this is all you need to do.
+Alternatively, you can add the load command to your `custom.js`. Take a look at the general installation instructions in the Wiki if you are unsure how to proceed.
 
 ## Internals
 You need the current master branch from Codemirror in order to get codefolding to work. This is still very much work-in-progress.
