@@ -3,7 +3,7 @@ The IPython notebook functionality (i.e. what you do with the Browser) can be ex
 IPython version support
 =======================
 
-| Version | Description |
+| IPython Version | Description |
 |------------|-------------|
 | 1.x | not supported |
 | 2.x | checkout 2.x branch |
@@ -12,6 +12,8 @@ IPython version support
 There are different branches of the notebook extensions in this repository.
 Please make sure you use the branch corresponding to your IPython version.
 Not all extensions may be available in 2.x and 3.x.
+
+Note: This is not related to the __Python__ version.
 
 #Overview
 The repository is organized in different categories: 
