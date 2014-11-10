@@ -136,7 +136,7 @@ How to do this is described in the next section.
 
 ## Adding the extension to custom.js
 
-## For IPython version 2.x
+### For IPython version 2.x
 Your `custom.js` should look like this:
 ```javascript
 // activate extensions only after Notebook is initialized
@@ -147,7 +147,7 @@ $([IPython.events]).on("app_initialized.NotebookApp", function () {
     });
 });
 ```
-## For IPython version 3.x
+### For IPython version 3.x
 Your `custom.js` should look like this:
 ```javascript
 // activate extensions only after Notebook is initialized
