@@ -52,8 +52,7 @@ The repository is organized in different categories:
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [nbconvert-button](wiki/Nbconvert-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook (deprecated)     |
-| [printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab (deprecated)                   |
+| [printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.                   |
 | [printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
 | gist_it                             |  Publish notebook as a gist  |
 | nbviewer_theme | |
