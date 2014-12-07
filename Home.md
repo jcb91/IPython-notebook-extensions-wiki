@@ -7,9 +7,9 @@ IPython version support
 |------------|-------------|
 | 1.x | not supported |
 | 2.x | checkout 2.x branch |
-| [3.x](#Home_3x) | checkout 3.x branch |
+| [3.x](Home_3x) | checkout 3.x branch |
 
-For version 3.x information click here: [3.x](#Home_3x)
+For version 3.x information click here: [3.x](Home_3x)
 
 There are different branches of the notebook extensions in this repository.
 Please make sure you use the branch corresponding to your IPython version.
