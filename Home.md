@@ -138,23 +138,11 @@ How to do this is described in the next section.
 
 ## Adding the extension to custom.js
 
-### For IPython version 2.x
 Your `custom.js` should look like this:
 ```javascript
 // activate extensions only after Notebook is initialized
 require(["base/js/events"], function (events) {
 $([IPython.events]).on("app_initialized.NotebookApp", function () {
-    /* load your extension here */
-    IPython.load_extensions('gist');
-    });
-});
-```
-### For IPython version 3.x
-Your `custom.js` should look like this:
-```javascript
-// activate extensions only after Notebook is initialized
-require(["base/js/events"], function (events) {
-    events.on("app_initialized.NotebookApp", function () {
     /* load your extension here */
     IPython.load_extensions('gist');
     });
