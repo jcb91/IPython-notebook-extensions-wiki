@@ -80,6 +80,7 @@ To load the extension you need to provide the name and local path without the `.
 ```Javascript
 %%javascript
 IPython.load_extensions('IPython-notebook-extensions-master/usability/python-markdown');
+```
 
 ##2. Automatically loading extensions
 For the time being, there is no nice GUI to do this. The easiest way to enable an extension is to use
