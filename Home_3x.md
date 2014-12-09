@@ -22,7 +22,7 @@ The repository is organized in different categories:
 | [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook         |
 | [hide_input_all](hide_input_all) | Hide all codecells in a notebook      |
 | [navigation-hotkeys.js](navigation_hotkeys) | Change hotkeys for navigation in notebook  |
-| [python-markdown.js](python-markdown) | Display Python variables in markdown  |
+| [python-markdown.js](python-markdown_v3) | Display Python variables in markdown  |
 | [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   |
 | [rubberband](Rubberband) | Multi-cell selection tool   |
 | [runtools](Runtools) | Add toolbar buttons for additional code execution options   |
@@ -32,10 +32,10 @@ The repository is organized in different categories:
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.                   |
+| [printview-button](Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.                   |
 | gist_it                             |  Publish notebook as a gist  |
 | nbviewer_theme | |
-| [htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
+| [htmltools/js_highlight.py](js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
 
 ##Styling
 
@@ -54,7 +54,7 @@ The repository is organized in different categories:
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [hierarchical_collapse](wiki/hierarchical_collapse)  |  Adds a button to hide all cells below the selected heading |
+| [hierarchical_collapse](hierarchical_collapse)  |  Adds a button to hide all cells below the selected heading |
 | history              |   |
 | swc             |   |
 | cellstate       |   |
