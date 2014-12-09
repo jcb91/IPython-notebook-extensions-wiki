@@ -66,7 +66,8 @@ It is still possible to use the old method and modify `custom.js`. Using new met
 
 ##1.Install the notebook extension repository:
 First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-master`.
-*Note: This will overwrite a previous version this installation*
+
+*Note: This will overwrite a previous version of this installation*
 
 There is a helper function in IPython that will do this automatically for you:
 ```Python
