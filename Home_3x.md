@@ -15,18 +15,18 @@ The repository is organized in different categories:
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
-| [codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
-| [comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
-| [executeTime.js](wiki/execute_timings) | Display when each cell has been executed and how long it took          |
-| [drag-and-drop](wiki/drag-and-drop) | Allow dragging of images into a notebook         |
-| [hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
-| [navigation-hotkeys.js](wiki/navigation_hotkeys) | Change hotkeys for navigation in notebook  |
-| [python-markdown.js](wiki/python-markdown) | Display Python variables in markdown  |
-| [read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
-| [rubberband](wiki/Rubberband) | Multi-cell selection tool   |
-| [runtools](wiki/Runtools) | Add toolbar buttons for additional code execution options   |
-| [shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
+| [chrome_clipboard](chrome_clipboard_v3) | Add system clipboard actions with crome      |
+| [codefolding](Codefolding_v3)  | Fold code blocks using Alt-F or clicking on gutter            |
+| [comment-uncomment.js](Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
+| [executeTime.js](execute_timings) | Display when each cell has been executed and how long it took          |
+| [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook         |
+| [hide_input_all](hide_input_all) | Hide all codecells in a notebook      |
+| [navigation-hotkeys.js](navigation_hotkeys) | Change hotkeys for navigation in notebook  |
+| [python-markdown.js](python-markdown) | Display Python variables in markdown  |
+| [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   |
+| [rubberband](Rubberband) | Multi-cell selection tool   |
+| [runtools](Runtools) | Add toolbar buttons for additional code execution options   |
+| [shift-tab.js](Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
 
 ##Publishing
 
