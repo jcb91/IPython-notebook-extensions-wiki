@@ -90,7 +90,7 @@ the requests module and communicate with the IPython config service directly.
 For example, to activate the `python-markdown` extension, you need to provide the name and local path without the `.js` extension and call the config service in IPython:
 ```Python
 from IPython.html.services.config import ConfigManager
-cm = ConfigManager()
+cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
 
@@ -101,7 +101,7 @@ To deactivate an extension from being reloaded, you use a very similar approach 
 Full example:
 ```Python
 from IPython.html.services.config import ConfigManager
-cm = ConfigManager()
+cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
 
@@ -110,7 +110,7 @@ You can generate a table of currently activated extensions this way:
 ```Python
 from IPython.html.services.config import ConfigManager
 from IPython.display import HTML
-cm = ConfigManager()
+cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 extensions =cm.get('notebook')
 table = ""
 for ext in extensions['load_extensions']:
