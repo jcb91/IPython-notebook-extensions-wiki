@@ -32,7 +32,8 @@ The code above can be folded like this:
 
 Installation
 ============
-Install the master version of the IPython-notebook-extensions repository as explained on the main wiki page.
+Install the master version of the IPython-notebook-extensions repository as explained on the main wiki page
+[here](https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home_3x).
 
 Then load the extension from within the IPyton notebook:
 ```javascript
