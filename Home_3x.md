@@ -1,3 +1,5 @@
+** Still Work In Progress **
+
 The IPython notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
 #Overview for IPython Version 3.x
@@ -87,23 +89,9 @@ For the time being, there is no nice GUI to do this. The easiest way to enable a
 the requests module and communicate with the IPython config service directly. 
 For example, to activate the `python-markdown` extension, you need to provide the name and local path without the `.js` extension and call the config service in IPython:
 ```Python
-import requests
-import json
-
-extensions={}
-notebook_config = {}
-extensions['IPython-notebook-extensions-master/usability/python-markdown'] = True
-notebook_config['load_extensions'] = extensions
-
-payload = json.dumps(notebook_config)
-r = requests.patch('http://127.0.0.1:8888/api/config/notebook', data=payload)
-if r.ok == True:
-    print("OK")
-```
-You can easily add more extensions by adding more lines like this:
-```Python
-extensions['IPython-notebook-extensions-master/usability/runtools/main'] = True
-extensions['IPython-notebook-extensions-master/usability/codefolding/main'] = True
+from IPython.html.services.config import ConfigManager
+cm = ConfigManager()
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
 
 ##3. Deactivating extensions
@@ -112,33 +100,20 @@ To deactivate an extension from being reloaded, you use a very similar approach 
 
 Full example:
 ```Python
-import requests
-import json
-
-extensions={}
-notebook_config = {}
-extensions['IPython-notebook-extensions-master/usability/python-markdown'] = None
-notebook_config['load_extensions'] = extensions
-
-payload = json.dumps(notebook_config)
-r = requests.patch('http://127.0.0.1:8888/api/config/notebook', data=payload)
-if r.ok == True:
-    print("OK")
+from IPython.html.services.config import ConfigManager
+cm = ConfigManager()
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
 
 ##4. Viewing activated extensions
 You can generate a table of currently activated extensions this way:
 ```Python
-r = requests.get('http://127.0.0.1:8888/api/config/notebook')
-if r.ok == True:
-    print("OK")
-import json
-notebook_config=r.json()
-
+from IPython.html.services.config import ConfigManager
 from IPython.display import HTML
-extensions = notebook_config['load_extensions']
+cm = ConfigManager()
+extensions =cm.get('notebook')
 table = ""
-for ext in extensions:
+for ext in extensions['load_extensions']:
     table += "<tr><td>%s</td>\n" % (ext)
 
 top = """
@@ -151,6 +126,7 @@ bottom = """
 </table>
 """
 HTML(top + table + bottom)
+
 ```
 
 ## Manual installation
