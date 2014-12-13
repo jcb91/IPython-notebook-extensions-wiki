@@ -101,6 +101,7 @@ To deactivate an extension from being reloaded, you use a very similar approach 
 Full example:
 ```Python
 from IPython.html.services.config import ConfigManager
+ip = get_python()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
