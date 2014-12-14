@@ -35,11 +35,9 @@ The repository is organized in different categories:
 | ---------------------- |---------------------------------------------------------------------------------|
 | [aspell](wiki/aspell) | Spellchecker using aspell |
 | [breakpoints](wiki/Breakpoints)  | Allow setting of breakpoints to stop execution of notebook cells            |
-| [chrome_clipboard](wiki/chrome_clipboard) | Add system clipboard actions with crome      |
 | [codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
 | [comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
 | [executeTime.js](wiki/execute_timings) | Display when each cell has been executed and how long it took          |
-| [drag-and-drop](wiki/drag-and-drop) | Allow dragging of images into a notebook         |
 | [help_panel.js](wiki/help_panel) | Display panel with hotkey help |
 | [hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
 | [linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
