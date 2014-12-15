@@ -9,9 +9,6 @@ The repository is organized in different categories:
 |------------|-------------|
 | [usability](#usability)  | Additional functionality for the notebook            |
 | [publishing](#publishing) | Getting your notebooks out in the wild               |
-| [styling](#styling)    | Styling schemes for different looks of the notebook  |
-| [slidemode](#slidemode)  | Slideshow creation                                   |
-| [testing](#testing)    | Extensions in a early stage                          |
 
 ##Usability
 
