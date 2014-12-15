@@ -35,32 +35,7 @@ The repository is organized in different categories:
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
 | [printview-button](Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.                   |
-| gist_it                             |  Publish notebook as a gist  |
-| nbviewer_theme | |
 | [htmltools/js_highlight.py](js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
-
-##Styling
-
-| File or Directory      | Description                                  | 
-| ---------------------- |----------------------------------------------|
-| styling/css_selector   |                                              |
-| styling/zenmode        |                                              |
-
-##Slidemode
-
-| File or Directory      | Description                                            | 
-| ---------------------- |---------------------------------------------------------------------------------|
-| slidemode              | Make slide creation for reveal.js easier                                          |
-
-##Testing
-
-| File or Directory      | Description                                            | 
-| ---------------------- |---------------------------------------------------------------------------------|
-| [hierarchical_collapse](hierarchical_collapse)  |  Adds a button to hide all cells below the selected heading |
-| history              |   |
-| swc             |   |
-| cellstate       |   |
-
 
 # General installation instruction
 Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
@@ -90,6 +65,7 @@ the requests module and communicate with the IPython config service directly.
 For example, to activate the `python-markdown` extension, you need to provide the name and local path without the `.js` extension and call the config service in IPython:
 ```Python
 from IPython.html.services.config import ConfigManager
+ip = get_ipython()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
@@ -101,7 +77,7 @@ To deactivate an extension from being reloaded, you use a very similar approach 
 Full example:
 ```Python
 from IPython.html.services.config import ConfigManager
-ip = get_python()
+ip = get_ipython()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
 ```
@@ -111,6 +87,7 @@ You can generate a table of currently activated extensions this way:
 ```Python
 from IPython.html.services.config import ConfigManager
 from IPython.display import HTML
+ip = get_ipython()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
 extensions =cm.get('notebook')
 table = ""
@@ -137,8 +114,7 @@ ipython locate
 ```
 or in IPython by executing:
 ```python
-import IPython
-ip=IPython.get_ipython()
+ip=get_ipython()
 ip.ipython_dir
 ```
 Now copy your notebook extension files in the `nbextensions` subdirectoy.
