@@ -20,6 +20,7 @@ The repository is organized in different categories:
 | [executeTime.js](execute_timings) | Display when each cell has been executed and how long it took          |
 | [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook         |
 | [hide_input_all](hide_input_all) | Hide all codecells in a notebook      |
+| [limit-output](limit-output) | Limit codecell output |
 | [navigation-hotkeys.js](navigation_hotkeys) | Change hotkeys for navigation in notebook  |
 | [python-markdown.js](python-markdown_v3) | Display Python variables in markdown  |
 | [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   |
