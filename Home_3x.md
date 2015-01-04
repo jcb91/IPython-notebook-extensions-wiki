@@ -105,7 +105,7 @@ HTML(top + table + bottom)
 
 ```
 
-## Manual installation
+# Manual installation
 First you need to find your local IPython directory. This can be done from command line:
 ```
 ipython locate
