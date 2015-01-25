@@ -1,3 +1,4 @@
+
 ** Still Work In Progress **
 
 The IPython notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
@@ -39,9 +40,12 @@ The repository is organized in different categories:
 Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
 It is still possible to use the old method and modify `custom.js`. Using new method is encouraged, however.
 
-*There is a graphical interface for activating/deactivating notebook extensions now.*
-You might want to use it:
+* There is a graphical interface for activating/deactivating notebook extensions now. You might want to use it:
 [config-extension](config-extension)
+
+* If you are using Anaconda, you can try using the conda package from here:
+https://binstar.org/juhasch/nbextensions
+(Currently, it is updated manually and may lag behind the Github repository)
 
 ##1.Install the notebook extension repository:
 First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-master`.
