@@ -39,6 +39,9 @@ The repository is organized in different categories:
 Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
 It is still possible to use the old method and modify `custom.js`. Using new method is encouraged, however.
 
+There is a graphical interface for activating/deactivating notebook extensions. You might want to use it:
+[config-extension](config-extension)
+
 ##1.Install the notebook extension repository:
 First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-master`.
 
