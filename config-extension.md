@@ -36,4 +36,13 @@ c.NotebookApp.extra_template_paths = [os.path.join(ipythondir,'templates') ]
 * Main         - main file that is loaded, typically 'main.js'
 * Compatibility- IPython version compatibility (e.g. 3.x)
 
- 
+Example:
+```
+Type: IPython Notebook Extension
+Name: Shift-Tab
+Description: Assign shift+tab key for dedent operation
+Link: https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Shift-tab
+Icon: icon.png
+Main: main.js
+Compatibility: 3.x 
+```
