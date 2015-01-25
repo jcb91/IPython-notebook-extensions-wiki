@@ -11,6 +11,7 @@ All required files are originally located in the 'config' of the repository.
  * copy 'main.js' and 'main.css' to your '~/.ipython/nbextensions/config' folder
  * copy 'nbextensions.py' to your '~/.ipython/extensions' folder
  * copy 'nbextensions.html' to your '~/.ipython/templates' folder
+
 ##2. Configuration
 Add the following lines to your 'ipython_notebook_config.py' file:
 '''
