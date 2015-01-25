@@ -14,6 +14,7 @@ All required files are originally located in the 'config' of the repository.
 
 ##2. Configuration
 Add the following lines to your 'ipython_notebook_config.py' file:
+
 '''
 from IPython.utils.path import get_ipython_dir
 import os
