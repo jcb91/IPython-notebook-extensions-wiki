@@ -14,8 +14,7 @@ All required files are originally located in the 'config' of the repository.
 
 ##2. Configuration
 Add the following lines to your 'ipython_notebook_config.py' file:
-
-'''
+```
 from IPython.utils.path import get_ipython_dir
 import os
 import sys
@@ -27,7 +26,7 @@ sys.path.append( extensions )
 c = get_config()
 c.NotebookApp.server_extensions = [ 'nbextensions', 'preview' ]
 c.NotebookApp.extra_template_paths = [os.path.join(ipythondir,'templates') ]
-'''
+```
 
 #YAML file format
 * Type         - identifier 'IPython Notebook Extension'
