@@ -1,7 +1,7 @@
 **There is a Javascript-only spellchecker available now from Doug Blank:**
 
-* [Installation](https://www.youtube.com/watch?v=Km3AtRynWFQ)
-* [Demonstration](https://www.youtube.com/watch?v=o4xCp3b4oCw)
+* [Demonstration](https://www.youtube.com/watch?v=Km3AtRynWFQ)
+* [Installation](https://www.youtube.com/watch?v=o4xCp3b4oCw)
 
 It is recommended to use the above spellchecker instead of the aspell-based one.
 
