@@ -20,6 +20,7 @@ Before rendering the markdown cell:
 After rendering the markdown cell:
 ![after](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/python-markdown-post.png)
 
+Python code is only executed when the notebook is trusted. So if your original Python code is still shown in rendered markdown output, please make sure your notebook is trusted.
 
 **Caution:** There is no restriction in the expression you can embedd in `{{ }}`. Be careful as you might crash your browser if you return too large datasets.
 
