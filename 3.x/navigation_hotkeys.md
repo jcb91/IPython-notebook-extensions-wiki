@@ -9,10 +9,9 @@ Hotkeys in
 | `Alt`- `+`  | Split cell and keep cursor position  |
 | `Alt`- `-`  | Combine cell and keep cursor position  |
 | `Alt`-`n`   | Toggle line number display in current codecell |
-| `Shift`-`Enter` | Execute current cell, find next code cell and go into edit mode           |
+| `Shift`-`Enter` | Execute cell, goto next cell and stay in edit mode if next cell is a code cell or unredered markdown cell |
+| `Ctrl`-`Enter` | Execute cell and stay in edit mode if cell is a code cell |
 | `Ctrl`-`y` | toggle celltype between markdown and code      |
-| `Ctrl`-`Home` | Go to top of notebook           |
-| `Ctrl`-`End` | Go to bottom of notebook           |
 
 ## Command Mode
 
