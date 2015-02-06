@@ -147,7 +147,7 @@ $([IPython.events]).on("app_initialized.NotebookApp", function () {
 });
 ```
 
-In the example above, the `toc.js` is loaded. Note: You don't need to specify the `.js` file extension.
+In the example above, the `gist.js` is loaded. Note: You don't need to specify the `.js` file extension.
 
 A template `custom.js` file is geven here : [ipython-contrib/custom.example.js](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/custom.example.js)
 
