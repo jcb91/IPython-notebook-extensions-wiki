@@ -1,3 +1,13 @@
+
+## Removed extension.
+
+This extension is no longer necessary so it has been removed [on pull request 185](https://github.com/ipython-contrib/IPython-notebook-extensions/pull/185). 
+
+You can see the last version of the code there if you are interested in the internals
+of how it was working. 
+
+## Shift tab
+
 The dedent hotkey for the IPython notebook is `Ctrl-]`. Unfortunately, for non-US keyboards it is difficult or even impossible to generate this key combination.
 
 Therefore, the <b>shift-tab</b> extension allows using `Shift-tab` keys for dedent operation.
