@@ -36,7 +36,7 @@ Copy the `codefolding` directory to a new `/nbextensions/usability/codefolding` 
 Then load the extension from within the IPyton notebook:
 ```javascript
 %%javascript
-IPython.load_extensions('usability/codefolding/codefolding');
+IPython.load_extensions('usability/codefolding/main');
 ```
 
 Alternatively, you can add the load command to your `custom.js`. Take a look at the general installation instructions in the Wiki if you are unsure how to proceed.
