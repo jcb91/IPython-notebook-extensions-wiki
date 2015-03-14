@@ -1,4 +1,4 @@
-There is now a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions/' URL:
+There is now a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions/' URL (mind the trailing slash):
 
 ![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/notebook-configuration.png)
 
@@ -24,7 +24,7 @@ extensions = os.path.join(ipythondir,'extensions')
 sys.path.append( extensions )
 
 c = get_config()
-c.NotebookApp.server_extensions = [ 'nbextensions', 'preview' ]
+c.NotebookApp.server_extensions = [ 'nbextensions']
 c.NotebookApp.extra_template_paths = [os.path.join(ipythondir,'templates') ]
 ```
 
