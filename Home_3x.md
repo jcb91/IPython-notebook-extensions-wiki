@@ -85,7 +85,7 @@ Full example:
 from IPython.html.services.config import ConfigManager
 ip = get_ipython()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
-cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": None}})
 ```
 
 ##4. Viewing activated extensions
