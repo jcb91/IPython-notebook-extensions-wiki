@@ -13,6 +13,8 @@ It will be displayed as:
 a = 1.23
 ```
 
+[![Demo Video](http://img.youtube.com/vi/_wLwLsgkExc/0.jpg)](https://youtu.be/_wLwLsgkExc)
+
 ## Further examples
 Before rendering the markdown cell:
 ![before](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/python-markdown-pre.png)
