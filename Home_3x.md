@@ -44,7 +44,7 @@ https://binstar.org/juhasch/nbextensions
 (Currently, it is updated manually and may lag behind the Github repository)
 
 ##1.Install the notebook extension repository:
-First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-master`.
+First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-3.x`.
 
 *Note: This will overwrite a previous version of this installation*
 
