@@ -4,6 +4,9 @@ Some extension may work with other languages than Python, however this currently
 
 IPython version support
 =======================
+There are different branches of the notebook extensions in this repository.
+Please make sure you use the branch corresponding to your IPython version.
+Not all extensions are available for version 2.x and 3.x.
 
 | IPython Version | Description |
 |------------|-------------|
@@ -12,10 +15,6 @@ IPython version support
 | [3.x](Home_3x) | checkout 3.x branch |
 
 **For IPython version 3.x information click here: [3.x](Home_3x)**
-
-There are different branches of the notebook extensions in this repository.
-Please make sure you use the branch corresponding to your IPython version.
-Not all extensions may be available in 2.x and 3.x.
 
 Note: This is not related to the __Python__ version.
 
