@@ -7,7 +7,7 @@ In order to work, this extensions needs to be installed and notebook extensions 
 
 #Setup procedure
 ##1. Installation
-All required files are originally located in the 'config' of the repository.
+All required files are originally located in the 'config' subdirectory of the repository.
  * copy 'main.js' and 'main.css' to your '~/.ipython/nbextensions/config' folder
  * copy 'nbextensions.py' to your '~/.ipython/extensions' folder
  * copy 'nbextensions.html' to your '~/.ipython/templates' folder
