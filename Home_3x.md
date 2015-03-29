@@ -1,40 +1,36 @@
-
-** Still Work In Progress **
-
 The IPython notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
-#Overview for IPython Version 3.x
+#Notebook extensions for IPython/Jupyter Version 3.x
 The repository is organized in different categories: 
 
 | Name | Description |
 |------------|-------------|
-| [usability](#usability)  | Additional functionality for the notebook            |
-| [publishing](#publishing) | Getting your notebooks out in the wild               |
+| [usability](#usability)  | Additional functionality for the notebook       |
+| [publishing](#publishing) | Getting your notebooks out in the wild       |
 
 ##Usability
 
-| File or Directory      | Description                                            | 
-| ---------------------- |---------------------------------------------------------------------------------|
-| [chrome_clipboard](chrome_clipboard_v3) | Add system clipboard actions with crome      |
-| [codefolding](Codefolding_v3)  | Fold code blocks using Alt-F or clicking on gutter            |
-| [comment-uncomment.js](Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
-| [executeTime.js](execute_timings) | Display when each cell has been executed and how long it took          |
-| [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook         |
-| [hide_input_all](hide_input_all) | Hide all codecells in a notebook      |
-| [limit-output](limit-output) | Limit codecell output |
-| [navigation-hotkeys.js](navigation_hotkeys) | Change hotkeys for navigation in notebook  |
-| [python-markdown.js](python-markdown_v3) | Display Python variables in markdown  |
-| [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   |
-| [rubberband](Rubberband) | Multi-cell selection tool   |
-| [runtools](Runtools) | Add toolbar buttons for additional code execution options   |
-| [shift-tab.js](Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
+| File or Directory      | Description                                            | Status |
+| ---------------------- |--------------------------------------------------------|--------|
+| [chrome_clipboard](chrome_clipboard_v3) | Add system clipboard actions with crome   | working |
+| [codefolding](Codefolding_v3)  | Fold code blocks using Alt-F or clicking on gutter | working |
+| [comment-uncomment.js](Comment-uncomment) | Toggle comments in selected lines using Alt-C  | working |
+| [executeTime.js](execute_timings) | Display when each cell has been executed and how long it took | working |
+| [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook | working |
+| [hide_input_all](hide_input_all) | Hide all codecells in a notebook | untested    |
+| [limit-output](limit-output) | Limit codecell output | working |
+| [navigation-hotkeys.js](navigation_hotkeys) | Change hotkeys for navigation in notebook | working |
+| [python-markdown.js](python-markdown_v3) | Display Python variables in markdown | working |
+| [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   | untested |
+| [rubberband](Rubberband) | Multi-cell selection tool   | working |
+| [runtools](Runtools) | Add toolbar buttons for additional code execution options  | working |
 
 ##Publishing
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [printview-button](Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.                   |
-| [htmltools/js_highlight.py](js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
+| [printview](Printview) | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.     | working |
+| [htmltools/js_highlight.py](js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter | untested |
 
 # General installation instruction
 Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
@@ -55,14 +51,14 @@ First install the notebook extensions repository on your local `.ipython/nbexten
 There is a helper function in IPython that will do this automatically for you:
 ```Python
 import IPython.html.nbextensions as nb
-ext= 'https://github.com/ipython-contrib/IPython-notebook-extensions/archive/master.zip'
+ext= 'https://github.com/ipython-contrib/IPython-notebook-extensions/archive/3.x.zip'
 nb.install_nbextension(ext)
 ```
 ##2. Loading an extension
 To load the extension you need to provide the name and local path without the `.js` extension:
 ```Javascript
 %%javascript
-IPython.load_extensions('IPython-notebook-extensions-master/usability/python-markdown');
+IPython.load_extensions('IPython-notebook-extensions-3.x/usability/python-markdown/main');
 ```
 
 ##2. Automatically loading extensions
@@ -73,19 +69,18 @@ For example, to activate the `python-markdown` extension, you need to provide th
 from IPython.html.services.config import ConfigManager
 ip = get_ipython()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
-cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": True}})
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-3.x/usability/runtools/main": True}})
 ```
 
 ##3. Deactivating extensions
-To deactivate an extension from being reloaded, you use a very similar approach talking to the IPython config service. In this case you specify `None` as value with the extension name as key:
-`extensions['IPython-notebook-extensions-master/usability/python-markdown'] = None`
+To deactivate an extension from being reloaded, you use a very similar approach talking to the IPython config service. In this case you specify `None` as value with the extension name as key.
 
 Full example:
 ```Python
 from IPython.html.services.config import ConfigManager
 ip = get_ipython()
 cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
-cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-master/usability/runtools/main": None}})
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-3.x/usability/runtools/main": None}})
 ```
 
 ##4. Viewing activated extensions
@@ -129,7 +124,7 @@ Now copy your notebook extension files in the `nbextensions` subdirectoy.
 Once the notebook extension has been installed, they can be loaded like this:
 ```javascript
 %%javascript
-IPython.load_extensions('gist');
+IPython.load_extensions('IPython-notebook-extensions-3.x/usability/runtools/main');
 ```
 ## Automatic loading of a notebook extension
 If you want an extension to be always loaded, you need to call it in your local `custom.js` file.
@@ -155,5 +150,7 @@ If the extension does not work, here is how you can check what is wrong:
 
 1. Clear your browser cache or start a private browser tab.
 2. Verify the extension can be loaded by the IPython notebook, for example:
-    `http://127.0.0.1:8888/nbextensions/gist.js`
-3. Check for error messages in the JavaScript console. 
+    `http://127.0.0.1:8888/nbextensions/IPython-notebook-extensions-3.x/usability/runtools/main.js`
+3. Check for error messages in the JavaScript console of the browser. 
+
+Feel free to improve this Wiki documentation.
