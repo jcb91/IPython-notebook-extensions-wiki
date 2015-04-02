@@ -13,7 +13,7 @@ All required files are originally located in the 'config' subdirectory of the re
  * copy 'nbextensions.html' to your '~/.ipython/templates' folder
 
 ##2. Configuration
-Add the following lines to your 'ipython_notebook_config.py' file:
+Add the following lines to your 'ipython_notebook_config.py' file (inside your profile directory, e.g. ~/.ipython/profile_default/):
 ```
 from IPython.utils.path import get_ipython_dir
 import os
