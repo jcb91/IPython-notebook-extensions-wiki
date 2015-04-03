@@ -34,7 +34,7 @@ Install the master version of the IPython-notebook-extensions repository as expl
 Then load the extension from within the IPyton notebook:
 ```javascript
 %%javascript
-IPython.load_extensions('IPython-notebook-extensions-master/usability/python-markdown');
+IPython.load_extensions('IPython-notebook-extensions-master/usability/python-markdown/main');
 ```
 
 In order to have `nbconvert` show the preprocessed output, copy the `pymdpreprocessor.py` file to a location in your `PYTHONPATH`and add or extend the following line to your `ipython_nbconvert_config.py` configuration file:
