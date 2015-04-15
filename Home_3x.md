@@ -39,9 +39,9 @@ It is still possible to use the old method and modify `custom.js`. Using new met
 * There is a graphical interface for activating/deactivating notebook extensions now. You might want to use it:
 [config-extension](config-extension)
 
-* If you are using Anaconda, you can try using the conda package from here:
-https://binstar.org/juhasch/nbextensions
-(Currently, it is updated manually and may lag behind the Github repository)
+* If you are using Anaconda, you can try using one of the conda packages on binstar (the standard installation steps below will install the package to the standard system paths, not the custom Anaconda paths; note also that  these packages are updated manually and may lag behind the Github repository):
+ * (Windows or Mac) ```conda install -c https://conda.binstar.org/juhasch nbextensions```
+ * (Linux) ```conda install -c https://conda.binstar.org/ostrokach nbextensions``` 
 
 ##1.Install the notebook extension repository:
 First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-3.x`.
@@ -118,7 +118,7 @@ or in IPython by executing:
 ip=get_ipython()
 ip.ipython_dir
 ```
-Now copy your notebook extension files in the `nbextensions` subdirectoy.
+Now copy your notebook extension files from the .zip package to the `nbextensions` subdirectoy.
 
 ## Interactive loading of a notebook extension
 Once the notebook extension has been installed, they can be loaded like this:
