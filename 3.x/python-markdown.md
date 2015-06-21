@@ -31,7 +31,7 @@ There are different versions of this extension for the 2.x or 3.x version of IPy
 Copy `python-markdown.js` to the `nbextensions` directory of your IPython notebook server.
 Then load the using
 ```javascript
-%javascript
+%%javascript
 IPython.load_extensions('python-markdown')
 ```
 You can add the `IPython.load_extensions('python-markdown')` call to your local `custom.js` file to have the extension automatically loaded. See the IPython documentation or the main make of this Wiki for details.
