@@ -13,7 +13,7 @@ Not all extensions are available for version 2.x and 3.x.
 | 1.x | not supported |
 | 2.x | checkout 2.x branch |
 | [3.x](Home_3x) | checkout 3.x branch |
-| Jupyter | checkout master branch |
+| [Jupyter](Home_Jupyter) | checkout master branch |
 
 Note: This is not related to the __Python__ version.
 
