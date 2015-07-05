@@ -1,20 +1,19 @@
-The IPython notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
+The IPython/Jupyter notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
 Some extension may work with other languages than Python, however this currently has not been tested.
 
-IPython version support
+IPython/Jupyter version support
 =======================
 There are different branches of the notebook extensions in this repository.
-Please make sure you use the branch corresponding to your IPython version.
+Please make sure you use the branch corresponding to your IPython/Jupyter version.
 Not all extensions are available for version 2.x and 3.x.
 
-| IPython Version | Description |
+| IPython/Jupyter Version | Description |
 |------------|-------------|
 | 1.x | not supported |
 | 2.x | checkout 2.x branch |
 | [3.x](Home_3x) | checkout 3.x branch |
-
-**For IPython version 3.x information click here: [3.x](Home_3x)**
+| Jupyter | checkout master branch |
 
 Note: This is not related to the __Python__ version.
 
