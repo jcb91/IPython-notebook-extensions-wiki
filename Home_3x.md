@@ -24,6 +24,7 @@ The repository is organized in different categories:
 | [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   | untested |
 | [rubberband](Rubberband) | Multi-cell selection tool   | working |
 | [runtools](Runtools) | Add toolbar buttons for additional code execution options  | working |
+| [skip-traceback](Skip-Traceback) | Don't display traceback, only error type and message | working |
 
 ##Publishing
 
