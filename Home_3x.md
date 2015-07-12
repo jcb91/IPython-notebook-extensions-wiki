@@ -19,8 +19,8 @@ The repository is organized in different categories:
 | [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook | working |
 | [hide_input_all](hide_input_all) | Hide all codecells in a notebook | untested    |
 | [limit-output](limit-output) | Limit codecell output | working |
-| [navigation-hotkeys.js](navigation_hotkeys) | Change hotkeys for navigation in notebook | working |
-| [python-markdown.js](python-markdown_v3) | Display Python variables in markdown | working |
+| [navigation-hotkeys](navigation_hotkeys) | Change hotkeys for navigation in notebook | working |
+| [python-markdown](python-markdown_v3) | Display Python variables in markdown | working |
 | [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   | untested |
 | [rubberband](Rubberband) | Multi-cell selection tool   | working |
 | [runtools](Runtools) | Add toolbar buttons for additional code execution options  | working |
