@@ -149,7 +149,7 @@ $([IPython.events]).on("app_initialized.NotebookApp", function () {
 
 In the example above, the `gist.js` is loaded. Note: You don't need to specify the `.js` file extension.
 
-A template `custom.js` file is given here : [ipython-contrib/custom.example.js](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/custom.example.js)
+A template `custom.js` file that assumes you've copied the contents of this repo into your `nbextensions` directory is given here : [ipython-contrib/custom.example.js](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/custom.example.js)
 
 It is also possible to add additional locations where extensions or the `custom.js` file can be placed.
 This can be configured in the `ipython_notebook_config.py` file. To find out if
