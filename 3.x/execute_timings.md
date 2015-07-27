@@ -20,7 +20,7 @@ Copy `ExecuteTime.{js,css}`, and add `require(['/static/custom/ExecuteTime.js'])
 ```javascript
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
   //... 
-  require(['/static/custom/executeTime.js'])
+  require(['/static/custom/ExecuteTime.js'])
 });
 ```
 
