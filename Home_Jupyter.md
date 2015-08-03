@@ -36,25 +36,25 @@ The repository is organized in different categories:
 | [htmltools/js_highlight.py](js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter | untested |
 
 # General installation instruction
-Installing and activating notebook extensions works differently in Jupyter compared to Python.
+Installing and activating notebook extensions works differently in Jupyter compared to Python. Please be aware that Jupyter is still in development stage and some commands would change in future. 
 
 * There is a graphical interface for activating/deactivating notebook extensions now. You might want to use it:
 [config-extension](config-extension)
 
 ##1. Installing an extension
 
-`jupyter nbextension install <name of extension>`
+`jupyter-nbextension install <name of extension>`
 
 Example:
-`jupyter nbextension install usability/codefolding/main`
+`jupyter-nbextension install usability/codefolding/main`
 
 ##2. Activating an extension
 
-`jupyter nbextension enable <name of extension>`
+`jupyter-nbextension enable <name of extension>`
 
 ##3. Deactivating extensions
 
-`jupyter nbextension enable <name of extension>`
+`jupyter-nbextension disenable <name of extension>`
 
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
