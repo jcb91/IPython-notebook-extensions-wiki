@@ -27,6 +27,7 @@ The repository is organized in different categories:
 | [rubberband](Rubberband) | Multi-cell selection tool   | working |
 | [runtools](Runtools) | Add toolbar buttons for additional code execution options  | working |
 | [search-replace](search-replace) | Add a toolbar for notebook-wide search and replace  | working |
+| [skip-traceback](skip-traceback) | Skip traceback and only display error message  | working |
 
 ##Publishing
 
