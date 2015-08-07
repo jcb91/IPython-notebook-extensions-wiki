@@ -50,7 +50,8 @@ First install the notebook extensions repository on your local `.ipython/nbexten
 
 *Note: This will overwrite a previous version of this installation*
 
-There is a helper function in IPython that will do this automatically for you:
+You can either install extensions locally or system wide.There is a helper function in IPython that will do this automatically for you. If you want to install them system wide, you need to be root. Or you can install them in your local python directory. In order to do that, you need to execute the command with  ```nb.install_nbextension(ext,user=True)``` 
+
 ```Python
 import IPython.html.nbextensions as nb
 ext= 'https://github.com/ipython-contrib/IPython-notebook-extensions/archive/3.x.zip'
