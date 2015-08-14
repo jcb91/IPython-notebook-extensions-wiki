@@ -1,6 +1,4 @@
-The IPython/Jupyter notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
-
-Some extension may work with other languages than Python, however this currently has not been tested.
+The IPython notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
 IPython/Jupyter version support
 =======================
@@ -11,110 +9,139 @@ Not all extensions are available for version 2.x and 3.x.
 | IPython/Jupyter Version | Description |
 |------------|-------------|
 | 1.x | not supported |
-| 2.x | checkout 2.x branch |
-| [3.x](Home_3x) | checkout 3.x branch |
-| [Jupyter](Home_Jupyter) | checkout master branch |
+| [2.x](Home_2x)| checkout 2.x branch |
+| 3.x | checkout 3.x branch |
+| [4.x Jupyter](Home_Jupyter) | checkout master branch |
 
 Note: This is not related to the __Python__ version.
-
-
-#Overview for IPython Version 2.x
+#Notebook extensions for IPython/Jupyter Version 3.x
 The repository is organized in different categories: 
 
 | Name | Description |
 |------------|-------------|
-| [usability](#usability)  | Additional functionality for the notebook            |
-| [publishing](#publishing) | Getting your notebooks out in the wild               |
-| [styling](#styling)    | Styling schemes for different looks of the notebook  |
-| [slidemode](#slidemode)  | Slideshow creation                                   |
-| [testing](#testing)    | Extensions in a early stage                          |
+| [usability](#usability)  | Additional functionality for the notebook       |
+| [publishing](#publishing) | Getting your notebooks out in the wild       |
 
 ##Usability
 
-| File or Directory      | Description                                            | 
-| ---------------------- |---------------------------------------------------------------------------------|
-| [aspell](wiki/aspell) | Spellchecker using aspell |
-| [breakpoints](wiki/Breakpoints)  | Allow setting of breakpoints to stop execution of notebook cells            |
-| [codefolding](wiki/Codefolding)  | Fold code blocks using Alt-F or clicking on gutter            |
-| [comment-uncomment.js](wiki/Comment-uncomment) | Toggle comments in selected lines using Alt-C   |
-| [executeTime.js](wiki/execute_timings) | Display when each cell has been executed and how long it took          |
-| [help_panel.js](wiki/help_panel) | Display panel with hotkey help |
-| [hide_input_all](wiki/hide_input_all) | Hide all codecells in a notebook      |
-| [linenumbers.js](wiki/Linenumbers) | Add line numbers to code cells   |
-| [navigation-hotkeys.js](wiki/navigation_hotkeys) | Change hotkeys for navigation in notebook  |
-| [python-markdown.js](wiki/python-markdown) | Display Python variables in markdown  |
-| [read-only.js](wiki/Readonly) | Allow codecells to be set read-only, so no editing is possible   |
-| [rubberband](wiki/Rubberband) | Multi-cell selection tool   |
-| [runtools](wiki/Runtools) | Add toolbar buttons for additional code execution options   |
-| [search.js](wiki/Search) | Search notebook for expressions                      |
-| [shift-tab.js](wiki/Shift-tab) | Assign "shift-tab" key to dedent tabulator                      |
-| [international_keymap.js](wiki/International-Keymap) | Add new shortcuts to resolve issues with non US keymaps |
+| File or Directory      | Description                                            | Status |
+| ---------------------- |--------------------------------------------------------|--------|
+| [chrome_clipboard](chrome_clipboard_v3) | Add system clipboard actions with crome   | working |
+| [codefolding](Codefolding_v3)  | Fold code blocks using Alt-F or clicking on gutter | working |
+| [comment-uncomment.js](Comment-uncomment) | Toggle comments in selected lines using Alt-C  | working |
+| [executeTime.js](execute_timings) | Display when each cell has been executed and how long it took | working |
+| [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook | working |
+| [hide_input_all](hide_input_all) | Hide all codecells in a notebook | untested    |
+| [limit-output](limit-output) | Limit codecell output | working |
+| [navigation-hotkeys](navigation_hotkeys) | Change hotkeys for navigation in notebook | working |
+| [python-markdown](python-markdown_v3) | Display Python variables in markdown | working |
+| [read-only.js](Readonly) | Allow codecells to be set read-only, so no editing is possible   | untested |
+| [rubberband](Rubberband) | Multi-cell selection tool   | working |
+| [runtools](Runtools) | Add toolbar buttons for additional code execution options  | working |
+| [search-replace](search-replace) | Add a toolbar for notebook-wide search and replace  | working |
+| [skip-traceback](Skip-Traceback) | Don't display traceback, only error type and message | working |
 
 ##Publishing
 
 | File or Directory      | Description                                            | 
 | ---------------------- |---------------------------------------------------------------------------------|
-| [printview-button](wiki/Printview-button)	   | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.                   |
-| [printviewmenu-button](wiki/Printviewmenu-button)	   | Add a toolbar button to call menu entry `File->Print Preview` directly (V2 only)                   |
-| gist_it                             |  Publish notebook as a gist  |
-| nbviewer_theme | |
-| [htmltools/js_highlight.py](wiki/js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter |
-
-##Styling
-
-| File or Directory      | Description                                  | 
-| ---------------------- |----------------------------------------------|
-| styling/css_selector   |                                              |
-| styling/zenmode        |                                              |
-
-##Slidemode
-
-| File or Directory      | Description                                            | 
-| ---------------------- |---------------------------------------------------------------------------------|
-| slidemode              | Make slide creation for reveal.js easier                                          |
-
-##Testing
-
-| File or Directory      | Description                                            | 
-| ---------------------- |---------------------------------------------------------------------------------|
-| [hierarchical_collapse](wiki/hierarchical_collapse)  |  Adds a button to hide all cells below the selected heading |
-| history              |   |
-| swc             |   |
-| cellstate       |   |
-
+| [printview](Printview) | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.     | working |
+| [htmltools/js_highlight.py](js_highlight.py) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter | untested |
 
 # General installation instruction
-Notebook extensions can be installed by copying the corresponding javascript extension and it's accompanying files to the `nbextensions` directory of your local IPython directory (aka IPYTHONDIR) and calling it either directly in a notebook or adding it to the `custom.js` in your local profile.
+Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
+It is still possible to use the old method and modify `custom.js`. Using new method is encouraged, however.
 
-## Installing from a URL
-The easiest way to install an extension is directly from IPython:
-```python
-import IPython
-IPython.html.nbextensions.install_nbextension('https://rawgithub.com/minrk/ipython_extensions/master/nbextensions/gist.js')
+* There is a graphical interface for activating/deactivating notebook extensions now. You might want to use it:
+[config-extension](config-extension)
+
+* If you are using Anaconda, you can try using one of the conda packages on binstar (the standard installation steps below will install the package to the standard system paths, not the custom Anaconda paths; note also that  these packages are updated manually and may lag behind the Github repository):
+ * (Windows or Mac) ```conda install -c https://conda.binstar.org/juhasch nbextensions```
+ * (Linux) ```conda install -c https://conda.binstar.org/ostrokach nbextensions``` 
+
+##1.Install the notebook extension repository:
+First install the notebook extensions repository on your local `.ipython/nbextensions` directory. The new subdirectory is calles `IPython-notebook-extensions-3.x`.
+
+*Note: This will overwrite a previous version of this installation*
+
+You can either install extensions locally or system wide.There is a helper function in IPython that will do this automatically for you. If you want to install them system wide, you need to be root. Or you can install them in your local python directory. In order to do that, you need to execute the command with  ```nb.install_nbextension(ext,user=True)``` 
+
+```Python
+import IPython.html.nbextensions as nb
+ext= 'https://github.com/ipython-contrib/IPython-notebook-extensions/archive/3.x.zip'
+nb.install_nbextension(ext)
 ```
-You can verify if your extension has been installed by using
-```python
-IPython.html.nbextensions.check_nbextension('gist.js')
+##2. Loading an extension
+To load the extension you need to provide the name and local path without the `.js` extension:
+```Javascript
+%%javascript
+IPython.load_extensions('IPython-notebook-extensions-3.x/usability/python-markdown/main');
 ```
 
-## Manual installation
+##2. Automatically loading extensions
+For the time being, there is no nice GUI to do this. The easiest way to enable an extension is to use
+the requests module and communicate with the IPython config service directly. 
+For example, to activate the `python-markdown` extension, you need to provide the name and local path without the `.js` extension and call the config service in IPython:
+```Python
+from IPython.html.services.config import ConfigManager
+ip = get_ipython()
+cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-3.x/usability/runtools/main": True}})
+```
+
+##3. Deactivating extensions
+To deactivate an extension from being reloaded, you use a very similar approach talking to the IPython config service. In this case you specify `None` as value with the extension name as key.
+
+Full example:
+```Python
+from IPython.html.services.config import ConfigManager
+ip = get_ipython()
+cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
+cm.update('notebook', {"load_extensions": {"IPython-notebook-extensions-3.x/usability/runtools/main": None}})
+```
+
+##4. Viewing activated extensions
+You can generate a table of currently activated extensions this way:
+```Python
+from IPython.html.services.config import ConfigManager
+from IPython.display import HTML
+ip = get_ipython()
+cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
+extensions =cm.get('notebook')
+table = ""
+for ext in extensions['load_extensions']:
+    table += "<tr><td>%s</td>\n" % (ext)
+
+top = """
+<table border="1">
+  <tr>
+    <th>Extension name</th>
+  </tr>
+"""
+bottom = """
+</table>
+"""
+HTML(top + table + bottom)
+
+```
+
+# Manual installation
 First you need to find your local IPython directory. This can be done from command line:
 ```
 ipython locate
 ```
 or in IPython by executing:
 ```python
-import IPython
-ip=IPython.get_ipython()
+ip=get_ipython()
 ip.ipython_dir
 ```
-Now copy your notebook extension files in the `nbextensions` subdirectoy.
+Now copy your notebook extension files from the .zip package to the `nbextensions` subdirectoy.
 
 ## Interactive loading of a notebook extension
 Once the notebook extension has been installed, they can be loaded like this:
 ```javascript
 %%javascript
-IPython.load_extensions('gist');
+IPython.load_extensions('IPython-notebook-extensions-3.x/usability/runtools/main');
 ```
 ## Automatic loading of a notebook extension
 If you want an extension to be always loaded, you need to call it in your local `custom.js` file.
@@ -135,38 +162,12 @@ So your file will be located here:
 This is where you add a line to call your notebook extension.
 How to do this is described in the next section.
 
-## Adding the extension to custom.js
-
-Your `custom.js` should look like this:
-```javascript
-// activate extensions only after Notebook is initialized
-require(["base/js/events"], function (events) {
-$([IPython.events]).on("app_initialized.NotebookApp", function () {
-    /* load your extension here */
-    IPython.load_extensions('gist');
-    });
-});
-```
-
-In the example above, the `gist.js` is loaded. Note: You don't need to specify the `.js` file extension.
-
-A template `custom.js` file that assumes you've copied the contents of this repo into your `nbextensions` directory is given here : [ipython-contrib/custom.example.js](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/custom.example.js)
-
-It is also possible to add additional locations where extensions or the `custom.js` file can be placed.
-This can be configured in the `ipython_notebook_config.py` file. To find out if
-you have configured an extra path type:
-```python
-ip.config.NotebookApp.extra_static_paths
-```
-
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
 
 1. Clear your browser cache or start a private browser tab.
-2. Verify your `custom.js` is the one the IPython notebook is seeing, by opening it in the browser:
-    `http://127.0.0.1:8888/static/custom/custom.js`
-    <br/>_(as opposed to `../site-packages/IPython/html/static/custom/custom.js`,_
-    <br/>_which may the only `custom.js` loaded if you are using a virtualenv)_
-3. Verify the extension can be loaded by the IPython notebook, for example:
-    `http://127.0.0.1:8888/nbextensions/gist.js`
-3. Check for error messages in the JavaScript console. 
+2. Verify the extension can be loaded by the IPython notebook, for example:
+    `http://127.0.0.1:8888/nbextensions/IPython-notebook-extensions-3.x/usability/runtools/main.js`
+3. Check for error messages in the JavaScript console of the browser. 
+
+Feel free to improve this Wiki documentation.
