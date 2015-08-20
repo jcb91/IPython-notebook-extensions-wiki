@@ -82,7 +82,7 @@ Example:
 
 ##3. Deactivating extensions
 
-`jupyter-nbextension disenable <name of extension>`
+`jupyter-nbextension disable <name of extension>`
 
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
