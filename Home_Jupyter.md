@@ -1,6 +1,6 @@
 The Jupyter notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
-##Now where in the world did everything go ?
+## Now where in the world did everything go ?
 Jupyter/IPython 4.x works differently than IPython 3.x.
 
 In short
@@ -21,7 +21,7 @@ print(jupyter_config_path)
 `jupyter_config_dir()` shows you where your *local* configuration files are, `jupyter_config_path` shows you where Jupyter will look for configuration files. For the notebook, there are two files that will be used:
 `jupyter_notebook_config.py` and `jupyter_notebook_config.json`. 
 
-The `nbextension` directory has moved to a different location and can be found like this:
+The `nbextension` directory has moved to a different location and can be found in one of these directories:
 ```Python
 from __future__ import print_function
 from jupyter_core.paths import jupyter_data_dir, jupyter_data_path
@@ -29,7 +29,30 @@ print(jupyter_data_dir())
 print(jupyter_path())
 ```
 
-#Notebook extensions for Jupyter Version 4.x
+## Checking/loading notebook extension from IPython
+You can check if the directory or a file (or list of files) exists:
+```Python
+notebook.nbextensions.check_nbextension('usability/codefolding', user=True)
+notebook.nbextensions.check_nbextension('usability/codefolding/main.js', user=True)
+```
+Make sure to use `user=True` if you have the extensions installed in your local path (in `jupyter_data_dir()`).
+
+To enable an extension:
+```Python
+E = notebook.nbextensions.EnableNBExtensionApp()
+E.enable_nbextension('usability/codefolding/main')
+```
+
+To disable an extension:
+```Python
+D = notebook.nbextensions.DisableNBExtensionApp()
+D.disable_nbextension('usability/codefolding/main')
+``
+The configuration is stored in either `jupyter_config_dir()/notebok.json` or `jupyter_config_dir()/nbconfig/jupyter_config_dir()` depending on your Jupyter version.
+
+If you reload the notebook after enableing the installation, it will be loaded. You can check the Javascript console to confirm.
+
+# Notebook extensions for Jupyter Version 4.x
 The repository is organized in different categories: 
 
 | Name | Description |
