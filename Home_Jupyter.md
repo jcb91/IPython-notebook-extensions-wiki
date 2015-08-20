@@ -1,16 +1,16 @@
 The Jupyter notebook functionality (i.e. what you do with the Browser) can be extended using Javascript extensions. This repository contains a collection of such extensions. The maturity of the provided extensions may vary, please create an issue if you encounter any problems.
 
-#Now where in the world did everything go ?
+##Now where in the world did everything go ?
 Jupyter/IPython 4.x works differently than IPython 3.x.
 
 In short
 ----
 * The notebook was split from IPython. You need to install both to run the notebook with IPython now. The easiest way is to use Anaconda and do a `conda install jupyter`
-* There are no profiles anymore. You can specify environment variables to change the default.
-* The configuration has moved to new places. To find out where, see below
+* There are no profiles anymore. You can specify environment variables to change the default, see [Jupyter ML](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!topic/jupyter/7q02jjksvFU)].
+* The configuration has moved to a new place. To find out where, see below.
 * There is a kind of automatic upgrade of the configuration files from IPython 3.x to Jupyter.
 
-## So where did everything go?
+## So where can I find things now?
 To find where the configuration files are, start IPython 
 ```Python
 from __future__ import print_function
