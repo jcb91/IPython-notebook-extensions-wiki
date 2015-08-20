@@ -47,7 +47,7 @@ To disable an extension:
 ```Python
 D = notebook.nbextensions.DisableNBExtensionApp()
 D.disable_nbextension('usability/codefolding/main')
-``
+```
 The configuration is stored in either `jupyter_config_dir()/notebok.json` or `jupyter_config_dir()/nbconfig/jupyter_config_dir()` depending on your Jupyter version.
 
 If you reload the notebook after enableing the installation, it will be loaded. You can check the Javascript console to confirm.
