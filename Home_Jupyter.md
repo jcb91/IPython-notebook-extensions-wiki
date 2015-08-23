@@ -24,7 +24,7 @@ print(jupyter_config_path)
 The `nbextension` directory has moved to a different location and can be found in one of these directories:
 ```Python
 from __future__ import print_function
-from jupyter_core.paths import jupyter_data_dir, jupyter_data_path
+from jupyter_core.paths import jupyter_data_dir, jupyter_path
 print(jupyter_data_dir())
 print(jupyter_path())
 ```
