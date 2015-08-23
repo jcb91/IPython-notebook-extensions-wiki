@@ -53,7 +53,7 @@ D.disable_nbextension('usability/codefolding/main')
 ```
 The configuration is stored in either `jupyter_config_dir()/notebok.json` or `jupyter_config_dir()/nbconfig/notebook.json` depending on your Jupyter (4.0.xx or master) version.
 
-If you reload the notebook after enableing the installation, it will be loaded. You can check the Javascript console to confirm.
+If you reload the notebook after enabling a notebook extension, the extension will be loaded. You can check the Javascript console to confirm.
 
 # Notebook extensions for Jupyter Version 4.x
 The repository is organized in different categories: 
