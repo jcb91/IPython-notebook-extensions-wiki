@@ -32,6 +32,7 @@ print(jupyter_path())
 ## Checking/loading notebook extension from IPython
 You can check if the directory or a file (or list of files) exists:
 ```Python
+import notebook
 notebook.nbextensions.check_nbextension('usability/codefolding', user=True)
 notebook.nbextensions.check_nbextension('usability/codefolding/main.js', user=True)
 ```
@@ -39,12 +40,14 @@ Make sure to use `user=True` if you have the extensions installed in your local 
 
 To enable an extension:
 ```Python
+import notebook
 E = notebook.nbextensions.EnableNBExtensionApp()
 E.enable_nbextension('usability/codefolding/main')
 ```
 
 To disable an extension:
 ```Python
+import notebook
 D = notebook.nbextensions.DisableNBExtensionApp()
 D.disable_nbextension('usability/codefolding/main')
 ```
