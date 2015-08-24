@@ -29,13 +29,17 @@ c.NotebookApp.extra_template_paths = [os.path.join(ipythondir,'templates') ]
 ```
 
 #YAML file format
+The YAML file can have any name with the extension `YAML`, and describes the notebook extension.
+
 * Type         - identifier 'IPython Notebook Extension'
 * Name         - unique name of the extension
 * Description  - short explanation of the extension
 * Link         - link to more documentation
 * Icon         - small icon 400px wide
 * Main         - main file that is loaded, typically 'main.js'
-* Compatibility- IPython version compatibility (e.g. 3.x)
+* Compatibility- IPython version compatibility (3.x or 4.x)
+* Parameter    - Optional configuration parameter
+* ParameterDescription -  Description of the configuration parameter
 
 Example:
 ```
