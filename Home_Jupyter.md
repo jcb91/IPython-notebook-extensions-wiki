@@ -97,18 +97,18 @@ Installing and activating notebook extensions works differently in Jupyter compa
 
 ##1. Installing an extension
 
-`jupyter-nbextension install <name of extension>`
+`jupyter nbextension install <name of extension>`
 
 Example:
-`jupyter-nbextension install usability/codefolding/main`
+`jupyter nbextension install usability/codefolding/main`
 
 ##2. Activating an extension
 
-`jupyter-nbextension enable <name of extension>`
+`jupyter nbextension enable <name of extension>`
 
 ##3. Deactivating extensions
 
-`jupyter-nbextension disable <name of extension>`
+`jupyter nbextension disable <name of extension>`
 
 ## Troubleshooting
 If the extension does not work, here is how you can check what is wrong:
