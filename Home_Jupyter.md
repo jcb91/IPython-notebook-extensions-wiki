@@ -16,7 +16,7 @@ To find where the configuration files are, start IPython
 from __future__ import print_function
 from jupyter_core.paths import jupyter_config_dir, jupyter_config_path
 print(jupyter_config_dir())
-print(jupyter_config_path)
+print(jupyter_config_path())
 ```
 `jupyter_config_dir()` shows you where your *local* configuration files are, `jupyter_config_path` shows you where Jupyter will look for configuration files. For the notebook, there are two files that will be used:
 `jupyter_notebook_config.py` and `jupyter_notebook_config.json`. 
