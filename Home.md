@@ -32,6 +32,7 @@ The repository is organized in different categories:
 | [executeTime.js](execute_timings) | Display when each cell has been executed and how long it took | working |
 | [drag-and-drop](drag-and-drop) | Allow dragging of images into a notebook | working |
 | [hide_input_all](hide_input_all) | Hide all codecells in a notebook | untested    |
+| [latex_envs](latex_envs) | (some) LaTeX commands and environments in markdown cells | working |
 | [limit-output](limit-output) | Limit codecell output | working |
 | [navigation-hotkeys](navigation_hotkeys) | Change hotkeys for navigation in notebook | working |
 | [python-markdown](python-markdown_v3) | Display Python variables in markdown | working |
