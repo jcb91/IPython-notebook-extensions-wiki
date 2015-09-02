@@ -38,9 +38,9 @@ The YAML file can have any name with the extension `YAML`, and describes the not
 * **Icon**          - small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
 * **Main**          - main file that is loaded, typically 'main.js'
 * **Compatibility** - IPython version compatibility, e.g. '3.x' or '4.x' or '3.x 4.x'
-* **Parameters**    - Optional dictionary of configuration parameters, each of which may have properties:
-  * **name**        - unique (among all extensions) name of the configuration parameter
+* **Parameters**    - Optional dictionary of configuration parameters. The keys are the names used to store the configuration variable, so should be unique among all extensions. Each value is another dictionary, which may contain the following keys:
   * **description** - description of the configuration parameter
+  * **default**     - a default value used to populate the tag on the nbextensions config page. Note that this is more of a hint to the user than anything functional - since it's only set in the yaml file, the javascript implementing the extension in question might actually use a different default, depending on the implementation.
   * **input_type**  - controls the type of html tag used to render the parameter on the configuration page. Valid values include 'text', 'textarea', 'checkbox', [html5 input tags such as 'number', 'url', 'color', ...], plus a final type of 'list'
   * **list_element_type** - for parameters with input_type 'list', this is used in place of 'input_type' to render each element of the list
   * finally, extras such as **min** **step** **max** may be used by 'number' tags for validation
