@@ -1,9 +1,9 @@
-There is now a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions/' URL (mind the trailing slash):
+There is now a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions' URL:
 
 ![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/notebook-configuration.png)
 
 This is realized using a notebook server extension, new to IPython 3.x. 
-In order to work, this extension needs to be installed and notebook extensions require a YAML description file in '~/.ipython/nbextensions' (or a subdirectory thereof) in order to be found.
+In order to work, this extension needs to be installed, and notebook extensions require a YAML description file in '~/.ipython/nbextensions' (or a subdirectory thereof) in order to be found.
 
 #Setup procedure
 ##1. Installation
