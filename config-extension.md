@@ -1,4 +1,4 @@
-There is now a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions' URL:
+There is a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions' URL:
 
 ![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/notebook-configuration.png)
 
@@ -38,7 +38,7 @@ The YAML file can have any name with the extension `YAML`, and describes the not
 * **Icon**          - small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
 * **Main**          - main file that is loaded, typically 'main.js'
 * **Compatibility** - IPython version compatibility, e.g. '3.x' or '4.x' or '3.x 4.x'
-* **Parameters**    - Optional list of configuration parameters, each of which may have properties:
+* **Parameters**    - Optional dictionary of configuration parameters, each of which may have properties:
   * **name**        - unique (among all extensions) name of the configuration parameter
   * **description** - description of the configuration parameter
   * **input_type**  - controls the type of html tag used to render the parameter on the configuration page. Valid values include 'text', 'textarea', 'checkbox', [html5 input tags such as 'number', 'url', 'color', ...], plus a final type of 'list'
