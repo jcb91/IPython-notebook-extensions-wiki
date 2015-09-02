@@ -24,30 +24,41 @@ extensions = os.path.join(ipythondir,'extensions')
 sys.path.append( extensions )
 
 c = get_config()
-c.NotebookApp.server_extensions = [ 'nbextensions']
+c.NotebookApp.server_extensions = ['nbextensions']
 c.NotebookApp.extra_template_paths = [os.path.join(ipythondir,'templates') ]
 ```
 
 #YAML file format
-The YAML file can have any name with the extension `YAML`, and describes the notebook extension.
+The YAML file can have any name with the extension `YAML`, and describes the notebook extension. Note that keys (in bold) are case-sensitive.
 
-* Type         - identifier 'IPython Notebook Extension'
-* Name         - unique name of the extension
-* Description  - short explanation of the extension
-* Link         - link to more documentation
-* Icon         - small icon 400px wide
-* Main         - main file that is loaded, typically 'main.js'
-* Compatibility- IPython version compatibility (3.x or 4.x)
-* Parameter    - Optional configuration parameter
-* ParameterDescription -  Description of the configuration parameter
+* **Type**          - identifier, must be 'IPython Notebook Extension'
+* **Name**          - unique name of the extension
+* **Description**   - short explanation of the extension
+* **Link**          - a url for more documentation
+* **Icon**          - small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
+* **Main**          - main file that is loaded, typically 'main.js'
+* **Compatibility** - IPython version compatibility, e.g. '3.x' or '4.x' or '3.x 4.x'
+* **Parameters**    - Optional list of configuration parameters, each of which may have properties:
+  * **name**        - unique (among all extensions) name of the configuration parameter
+  * **description** - description of the configuration parameter
+  * **input_type**  - controls the type of html tag used to render the parameter on the configuration page. Valid values include 'text', 'textarea', 'checkbox', [html5 input tags such as 'number', 'url', 'color', ...], plus a final type of 'list'
+  * **list_element_type** - for parameters with input_type 'list', this is used in place of 'input_type' to render each element of the list
+  * finally, extras such as **min** **step** **max** may be used by 'number' tags for validation
 
 Example:
 ```
 Type: IPython Notebook Extension
-Name: Shift-Tab
-Description: Assign shift+tab key for dedent operation
-Link: https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Shift-tab
+Name: Limit Output
+Description: This extension limits the number of characters that can be printed below a codecell
+Link: https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/limit-output
 Icon: icon.png
 Main: main.js
-Compatibility: 3.x 
+Compatibility: 3.x 4.x
+Parameters:
+  limit_output:
+    description: Number of characters to limit output to
+    input_type: number
+    default: 10000
+    step: 1
+    min: 0
 ```
