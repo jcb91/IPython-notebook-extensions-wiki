@@ -3,17 +3,31 @@ There is a graphical user interface for activating/deactivating installed notebo
 ![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/notebook-configuration.png)
 
 This is realized using a notebook server extension, new to IPython 3.x. 
-In order to work, this extension needs to be installed, and notebook extensions require a YAML description file in '~/.ipython/nbextensions' (or a subdirectory thereof) in order to be found.
+In order to work, this extension needs to be installed, and notebook extensions require a YAML description file in under the `nbextensions` directory (see installation notes, below) in order to be found.
 
 #Setup procedure
 ##1. Installation
-All required files are originally located in the 'config' subdirectory of the repository.
- * copy 'main.js' and 'main.css' to your '~/.ipython/nbextensions/config' folder
- * copy 'nbextensions.py' to your '~/.ipython/extensions' folder
- * copy 'nbextensions.html' and 'rendermd.html' to your '~/.ipython/templates' folder
+
+All required files for the configuration page are originally located in the 'config' subdirectory of the repository.
+ * copy `nbextensions.py` to your `~/.ipython/extensions` folder (for 3.x or 4.x)
+ * copy `nbextensions.html` and `rendermd.html` to your `~/.ipython/templates` folder (for 3.x or 4.x)
+ * copy `main.js` and `main.css` to the `nbextensions/config/` directory, which can be found:
+   * for IPython 3.x, inside your `~/.ipython` folder, so `~/.ipython/nbextensions/config/`
+   * for Jupyter notebook (4.x), inside the folder given by running 
+     ```
+     from jupyter_core.paths import jupyter_data_dir;
+     print(jupyter_data_dir())
+     ```
+   in an ipython terminal. This varies between platforms, e.g. on Mac OSX, it outputs the expanded version of
+   `~/Library/Jupyter`, meaning we should put them in
+   `~/Library/Jupyter/nbextensions/config/`.
 
 ##2. Configuration
-Add the following lines to your 'ipython_notebook_config.py' file (inside your profile directory, e.g. ~/.ipython/profile_default/):
+To enable the config extension, you'll need to edit your notebook config file.
+In 3.x, this is in your profile directory, e.g. `~/.ipython/profile_default/ipython_notebook_config.py`
+whereas in Jupyter 4.x, it's `~/.jupyter/jupyter_notebook_config.py` (since Jupyter doesn't have a concept of profiles).
+
+Add the following lines:
 ```
 from IPython.utils.path import get_ipython_dir
 import os
