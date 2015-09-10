@@ -1,6 +1,6 @@
 There is a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions' URL:
 
-![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/notebook-configuration.png)
+![](https://raw.githubusercontent.com/ipython-contrib/IPython-notebook-extensions/master/nbextensions/config/icon.png)
 
 This is realized using a notebook server extension, new to IPython 3.x. 
 In order to work, this extension needs to be installed, and notebook extensions require a YAML description file in under the `nbextensions` directory (see installation notes, below) in order to be found.
