@@ -4,9 +4,12 @@
 * [Installation](http://calicoproject.org/ICalico#Installation_2)
 * [Installation Video](https://www.youtube.com/watch?v=o4xCp3b4oCw)
 
-It is recommended to use the above spellchecker instead of the aspell-based one.
+It is recommended to use the above spellchecker instead of this aspell-based one.
 
-### Aspell-based spell checker
+
+Aspell-based spell checker
+--------------------------
+
 This IPython notebook extension allows spellchecking using aspell (http://aspell.net/).
 It allows spell checking as you type in markdown cells or on demand using a toolbar button for any cell type.
 
@@ -15,45 +18,57 @@ The technical implementation is a server side spell checker, that communicates w
 A short demo video can be found here:
 http://www.youtube.com/watch?v=yk5ID5SAlLw
 
-## Installation
+
+Installation
+============
+
 * First you need to have the program `aspell` installed on a computer. 
 * Next, you need the `aspell-python` package (https://pypi.python.org/pypi/aspell-python-py2 or https://pypi.python.org/pypi/aspell-python-py3).
 * Finally, start `ipy-aspell-server.py`. If you want to run it in background, use something like `nohup python ipy-aspell-server.py &`. 
 
-For now the spell check language is configured to english in the line 
-`s = aspell.Speller('lang', 'en')` of `ipy-aspell-server.py`.
+For now the spell check language is configured to english in the line
 
-Now install the IPython notebook extension:
-
-Add `require(['/static/custom/aspell/ipy-aspell.js'])` to your `custom.js` 
-Copy the directory `aspell` to your `/static/custom/` directory of your IPython profile and add
-```javascript
-require(['/static/custom/aspell/ipy-aspell.js']);
-```
-to your `custom.js` file so it looks like this (IPython 2.x version):
-
-```javascript
-$([IPython.events]).on('app_initialized.NotebookApp', function(){
-    //...
-    require(['/static/custom/aspell/ipy-aspell.js']);
-});
+```python
+s = aspell.Speller('lang', 'en')
 ```
 
-If the computer `ipy-aspell.py` is running on is als running the IPython notebook server, 
+of `ipy-aspell-server.py`.
+
+Now install the IPython notebook extension: follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
+* [Home generic](Home)
+* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
+* [Home 3.x](Home-3.x)
+* [Home 2.x](Home-2.x)
+
+If the computer `ipy-aspell.py` is running on is also running the IPython notebook server, 
 add the line 
-`var wsUri = "ws://" + document.domain + ":8889/"+ "websocket";`
+
+```javascript
+var wsUri = "ws://" + document.domain + ":8889/"+ "websocket";
+```
+
 to `ipy-aspell.js`.
-If you use another computer, pleas add
-`var wsUri = "ws://" + "**my computer name**" + ":8889/"+ "websocket";`
+If you use another computer, please add
+
+```javascript
+var wsUri = "ws://" + "**my computer name**" + ":8889/"+ "websocket";
+```
 
 This extension needs some testing. Also, it does not do much error checking for now.
 Feedback and enhancements are welcome. 
-## Note
+
+
+Note
+----
+
 As all text to be spellchecked is transferred over the network unencrypted, this can be a major security risk. 
 Also, someone might modify the server program `ipy-aspell-server.py` to spy on you.
 Therefore, you should only use the spellchecker when it running on your local machine or setup.
 
-## Internals
+
+Internals
+=========
+
 The communication between the computer running `ipy-aspell.py` and the IPython notebook extension `ipy-aspell.js` running in your browser is realized using websockets at port 8989.
 
 The notebook extensions sends each word to be spell checked using a JSON string `"text":word, "line": i, "start":start, "end":end, "id":cell.cell_id` and receives back antother JSON string `"text":curWord, "line": cur.line, "start":start, "end":end, "id":cell.cell_id`.

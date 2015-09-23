@@ -1,7 +1,9 @@
-Multi-Cell selection using a rubberband. This extension is only available for IPython version 3.x.
+Multi-Cell selection using a rubberband. This extension is only available for IPython versions 3.x and 4.x.
+
 
 Description
 ===========
+
 The *rubberband* extension allows selecting multiple cells. Cells are selected by pressing `shift` or `ctrl`+`shift` + left mouse button click and dragging the rubber band over the cells.
 
 * `shift` + left mouse button : select cells that are currently touched by the rubberband
@@ -13,19 +15,21 @@ A short video demonstrating the rubberband extension can be found here:
 [![screenshot](https://cloud.githubusercontent.com/assets/2445216/4668769/b6dd5b72-5567-11e4-9b55-558da6da027c.jpg)](http://youtu.be/TOPfWhqa3oI)
 
 
-Two other extensions make use of this feature: exercise and chrome_clipboard.
+Two other extensions make use of this feature: exercise and [Chrome Clipboard](Chrome-Clipboard).
+
 
 Installation
 ============
-Copy the `rubberband` directory to a new `/nbextensions/usability/rubberband` directory of your user's IPython directory and add
-```javascript
-IPython.load_extensions('usability/rubberband/main')
-```
-to your `custom.js` file. Take a look at the general installation instructions in the Wiki if you are unsure how to proceed.
+
+Follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
+* [Home generic](Home)
+* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
+* [Home 3.x](Home-3.x)
+* [Home 2.x](Home-2.x)
+
 
 Internals
 =========
 
 New metadata element added to each cell:
 * `cell.metadata.selected` - means this cell is selected
-

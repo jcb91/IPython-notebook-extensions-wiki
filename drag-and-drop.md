@@ -9,21 +9,21 @@ As the older version was really an unsafe hack, please don't.
 A demo video showing drag&drop of images is here:
 http://youtu.be/buAL1bTZ73c
 
-## Installation
-From IPython simply call
-```python
-import IPython
-IPython.html.nbextensions.install_nbextension('https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/usability/dragdrop/drag-and-drop.js')
-```
 
-Then load the extension from within the IPyton notebook:
-```javascript
-%%javascript
-IPython.load_extensions('drag-and-drop');
-```
-Alternatively, you can add the load command to your `custom.js`.
+Installation
+============
 
-## Internals
+Follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
+* [Home generic](Home)
+* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
+* [Home 3.x](Home-3.x)
+* [Home 2.x](Home-2.x)
+
+
+
+Internals
+=========
+
 The image will be uploaded to the server into the directory where your notebook resides. This means, the image is not copied into the notebook itself, it will only be linked to. The markdown cell in the notebook will contain this tag:
 `<img  src="http://127.0.0.1:8888/notebooks/myimage.png"/>`
 

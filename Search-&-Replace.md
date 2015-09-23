@@ -1,5 +1,8 @@
-This extension provides a toolbar button to call the menu item `File->Print Preview` directly.
+This extension provides a notebook-wide search & replace toolbar.
 
+![before](search-replace.png)
+
+It uses the codemirror `search` and `searchcursor` add ons.  
 
 
 Installation

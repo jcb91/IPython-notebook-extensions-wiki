@@ -1,5 +1,4 @@
-This extension provides a toolbar button to call the menu item `File->Print Preview` directly.
-
+Allows us to hide all cells below the selected heading. This extension is still very much in testing.
 
 
 Installation

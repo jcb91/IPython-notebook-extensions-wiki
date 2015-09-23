@@ -1,12 +1,17 @@
-There is a graphical user interface for activating/deactivating installed notebook extensions by going to the '/nbextensions' URL:
+There is a graphical user interface for activating/deactivating installed notebook extensions available at the '/nbextensions' URL:
 
-![](https://raw.githubusercontent.com/ipython-contrib/IPython-notebook-extensions/master/nbextensions/config/icon.png)
+![](config.png)
 
 This is realized using a notebook server extension, new to IPython 3.x. 
-In order to work, this extension needs to be installed, and notebook extensions require a YAML description file in under the `nbextensions` directory (see installation notes, below) in order to be found.
+In order to work, this config extension needs to be installed, and notebook extensions require a YAML description file in under the `nbextensions` directory (see installation notes, below) in order to be found.
 
-#Setup procedure
-##1. Installation
+
+Setup procedure
+===============
+
+
+1. Installation
+---------------
 
 All required files for the configuration page are originally located in the 'config' subdirectory of the repository.
  * copy `nbextensions.py` to your `~/.ipython/extensions` folder (for 3.x or 4.x)
@@ -22,7 +27,10 @@ All required files for the configuration page are originally located in the 'con
    `~/Library/Jupyter`, meaning we should put them in
    `~/Library/Jupyter/nbextensions/config/`.
 
-##2. Configuration
+
+2. Configuration
+----------------
+
 To enable the config extension, you'll need to edit your notebook config file.
 In 3.x, this is in your profile directory, e.g. `~/.ipython/profile_default/ipython_notebook_config.py`
 whereas in Jupyter 4.x, it's `~/.jupyter/jupyter_notebook_config.py` (since Jupyter doesn't have a concept of profiles).
@@ -42,17 +50,21 @@ c.NotebookApp.server_extensions = ['nbextensions']
 c.NotebookApp.extra_template_paths = [os.path.join(ipythondir,'templates') ]
 ```
 
-#YAML file format
+
+YAML file format
+================
+
 The YAML file can have any name with the extension `YAML`, and describes the notebook extension. Note that keys (in bold) are case-sensitive.
 
 * **Type**          - identifier, must be 'IPython Notebook Extension'
 * **Name**          - unique name of the extension
 * **Description**   - short explanation of the extension
 * **Link**          - a url for more documentation
-* **Icon**          - small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
-* **Main**          - main file that is loaded, typically 'main.js'
+* **Icon**          - a url for a small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
+* **Main**          - main javascript file that is loaded, typically 'main.js'
 * **Compatibility** - IPython version compatibility, e.g. '3.x' or '4.x' or '3.x 4.x'
-* **Parameters**    - Optional dictionary of configuration parameters. The keys are the names used to store the configuration variable, so should be unique among all extensions. Each value is another dictionary, which may contain the following keys:
+* **Parameters**    - Optional list of configuration parameters. Each item is a dictionary with (some of) the following keys:
+  * **name**        - (mandatory) this is the name used to store the configuration variable in the config json, so should be unique among all extensions
   * **description** - description of the configuration parameter
   * **default**     - a default value used to populate the tag on the nbextensions config page. Note that this is more of a hint to the user than anything functional - since it's only set in the yaml file, the javascript implementing the extension in question might actually use a different default, depending on the implementation.
   * **input_type**  - controls the type of html tag used to render the parameter on the configuration page. Valid values include 'text', 'textarea', 'checkbox', [html5 input tags such as 'number', 'url', 'color', ...], plus a final type of 'list'
@@ -60,7 +72,8 @@ The YAML file can have any name with the extension `YAML`, and describes the not
   * finally, extras such as **min** **step** **max** may be used by 'number' tags for validation
 
 Example:
-```
+
+```yaml
 Type: IPython Notebook Extension
 Name: Limit Output
 Description: This extension limits the number of characters that can be printed below a codecell
@@ -69,10 +82,10 @@ Icon: icon.png
 Main: main.js
 Compatibility: 3.x 4.x
 Parameters:
-  limit_output:
-    description: Number of characters to limit output to
-    input_type: number
-    default: 10000
-    step: 1
-    min: 0
+- name: limit_output
+  description: Number of characters to limit output to
+  input_type: number
+  default: 10000
+  step: 1
+  min: 0
 ```

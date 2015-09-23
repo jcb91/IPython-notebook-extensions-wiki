@@ -2,7 +2,7 @@
 
 This extension adds a button to the toolbar that calls nbconvert on the notebook server:
 
-![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/nbconvert-button.png)
+![](nbconvert-button.png)
 
 When pressing the button on the toolbar, the following python command is executed:
 ```python
@@ -11,11 +11,12 @@ import os; os.system(\"ipython nbconvert --to html ' + name + '\")
 Where `name` ist the name of the current IPython notebook. 
 This leaves the resulting static html file from your notebook in the directory where the notebook resides.
 
-## Installation
-Copy the `nbconvert_button.js` file, and add `require(['/static/custom/nbconvert_button.js'])` to `custom.js` in your profile's `/static/custom` directory, so it looks like this:
-```javascript
-$([IPython.events]).on('app_initialized.NotebookApp', function(){
-  //... 
-  require(['/static/custom/nbconvert_button.js'])
-});
-```
+
+Installation
+============
+
+Follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
+* [Home generic](Home)
+* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
+* [Home 3.x](Home-3.x)
+* [Home 2.x](Home-2.x)

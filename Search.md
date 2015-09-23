@@ -1,7 +1,7 @@
 Simple search extension based on codemirror addon.
 Adds a search box to the notebook toolbar and selects search word if found.
 
-![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/search.png)
+![](search.png)
 
 Searches the whole notebook in markdown or code cells.
 
@@ -9,3 +9,12 @@ Searches the whole notebook in markdown or code cells.
 
 `RegEx` allows entering regular expressions as search term (not tested)
 
+
+Installation
+============
+
+Follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
+* [Home generic](Home)
+* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
+* [Home 3.x](Home-3.x)
+* [Home 2.x](Home-2.x)

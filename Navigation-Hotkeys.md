@@ -1,6 +1,8 @@
-Hotkeys in
+## Hotkeys in
 
-## Edit Mode
+
+Edit Mode
+---------
 
 | Hotkey | Description |
 |------------|-------------|
@@ -13,7 +15,9 @@ Hotkeys in
 | `Ctrl`-`Enter` | Execute cell and stay in edit mode if cell is a code cell |
 | `Ctrl`-`y` | toggle celltype between markdown and code      |
 
-## Command Mode
+
+Command Mode
+------------
 
 | Hotkey | Description |
 |------------|-------------|
@@ -22,3 +26,13 @@ Hotkeys in
 | `end` | Go to bottom of notebook           |
 | `pageup`   | scroll page up |
 | `pagedown` | scroll page down |
+
+
+Installation
+============
+
+Follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
+* [Home generic](Home)
+* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
+* [Home 3.x](Home-3.x)
+* [Home 2.x](Home-2.x)
