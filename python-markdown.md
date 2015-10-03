@@ -25,9 +25,9 @@ Before rendering the markdown cell:
 After rendering the markdown cell:
 ![after](python-markdown-post.png)
 
-Python code is only executed when the notebook is trusted. So if your original Python code is still shown in rendered markdown output, please make sure your notebook is trusted.
+Python code is only executed when the notebook is [trusted](https://ipython.org/ipython-doc/dev/notebook/security.html). So if your original Python code is still shown in rendered markdown output, please make sure your notebook is trusted. To trust a notebook use the File->Trust Notebook menu. 
 
-**Caution:** There is no restriction in the expression you can embedd in `{{ }}`. Be careful as you might crash your browser if you return too large datasets.
+**Caution:** There is no restriction in the expression you can embed in `{{ }}`. Be careful as you might crash your browser if you return too large datasets.
 
 Also, images in markdown will be removed due to the HTML sanitizer after a reload.
 
