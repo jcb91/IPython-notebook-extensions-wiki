@@ -173,4 +173,10 @@ Parameters:
   default: 10000
   step: 1
   min: 0
+- name: zenmode_backgrounds_example
+  description: "Urls to use as backgrounds."
+  input_type: list
+  list_element:
+    input_type: url
+
 ```
