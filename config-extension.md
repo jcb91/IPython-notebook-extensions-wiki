@@ -85,7 +85,7 @@ All required files for the configuration page are originally located in the 'con
   * copy the `templates/nbextensions.html` and `templates/rendermd.html` to sit in the `templates` from above
 
 
-2. Configuration
+3. Configuration
 ----------------
 
 
