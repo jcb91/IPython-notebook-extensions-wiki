@@ -175,8 +175,15 @@ Please be aware that since Jupyter is still in development, some commands may ch
 `jupyter nbextension install <name of extension>`
 
 Example:
-`jupyter nbextension install usability/codefolding/main`
+`jupyter nbextension install nbextensions/usability/codefolding/main`
 
+where the `nbextensions` directory is likely located in one of the locations given by running
+
+`jupyter --paths`
+
+Note the directory name for a package isn't always precisely the same as the name of the package. For instance, the directory for `drag-n-drop` is named `dragdrop`.
+
+On some systems, for example MacOS X using MacPorts, `jupyter nbextension` is executed using `jupyter-nbextension-#.#` where `#.#` is the version of Python being used by the notebook. 
 
 2. Activating an extension
 --------------------------
