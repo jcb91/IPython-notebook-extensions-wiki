@@ -225,6 +225,48 @@ HTML(top + table + bottom)
 ```
 
 
+Installation instructions for Anaconda
+======================================
+
+The instructions were tested on Anaconda 3 v.2.4.1.
+
+* First, clone nbextension master repository
+* Then, build Anaconda package:<br>
+`conda build IPython-notebook-extensions`
+
+**Notice:**
+At the end of a successful build, the last output lines will be something like these:
+```
+# If you want to upload this package to anaconda.org later, type:
+#
+# $ anaconda upload /home/myuser/anaconda3/conda-bld/linux-64/nbextensions-master-py35_0.tar.bz2
+#
+# To have conda build upload to anaconda.org automatically, use
+# $ conda config --set anaconda_upload yes
+```
+In the 4th line from the end you can see the path to the built anaconda package:
+`/home/myuser/anaconda3/conda-bld/linux-64/nbextensions-master-py35_0.tar.bz2`
+Use this path to install the package.
+
+* Now, install the newly built nbextensions package:<br>
+`conda install /home/myuser/anaconda3/conda-bld/linux-64/nbextensions-master-py35_0.tar.bz2`
+
+Configuration
+-------------
+During the package installation the jupyter-notebook and jupyter-nbconvert configuration files will be automatically updated.
+
+**Note:**
+If you have configured the Clusters tab in `jupyter_notebook_config.py` before installing the nbextensions package, the cluster tab may stop working and you will get the following warning when you start jupyter-notebook:
+```
+[W 13:20:31.257 NotebookApp] Collisions detected in jupyter_notebook_config.py and jupyter_notebook_config.json config files. jupyter_notebook_config.json has higher priority: {
+      "NotebookApp": {
+        "server_extensions": "<traitlets.config.loader.LazyConfigValue object at 0x7f9e117dce10> ignored, using ['nbextensions']"
+      }
+    }
+```
+Follow these instruction to move the Clusters tab configuration from `jupyter_notebook_config.py` to `jupyter_notebook_config.json`: [ipyparallel issue 64](/ipython/ipyparallel/issues/64)
+
+
 Troubleshooting
 ===============
 
