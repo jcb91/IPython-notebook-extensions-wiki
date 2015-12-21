@@ -253,7 +253,7 @@ Use this path to install the package.
 
 Configuration
 -------------
-During the package installation the jupyter-notebook and jupyter-nbconvert configuration files will be automatically updated.
+During the package installation the jupyter-notebook and jupyter-nbconvert configuration files will be automatically updated. You can now configure the individual extensions through the config page `http://localhost:8888/nbextensions`.
 
 **Note:**
 If you have configured the Clusters tab in `jupyter_notebook_config.py` before installing the nbextensions package, the cluster tab may stop working and you will get the following warning when you start jupyter-notebook:
