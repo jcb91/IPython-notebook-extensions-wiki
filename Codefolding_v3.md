@@ -7,15 +7,15 @@ Three different folding modes are supported:
 
 ### Indent Folding
 Python-style code folding, detetects indented code.
-![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/codefolding_indent_unfolded.png)
+![](codefolding_indent_unfolded.png)
 
 The unfolded code above can be folded like this:
 
-![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_indent_folded_1.png)
+![](codefolding_indent_folded_1.png)
 
 or this:
 
-![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_indent_folded_2.png)
+![](codefolding_indent_folded_2.png)
 
 ### Bracket Folding
 Other languages like Javascript use brackets to designate code blocks. Codefolding is supported for Javascript in using the `%%javascript` magic in a codecell.
@@ -23,11 +23,11 @@ Other languages like Javascript use brackets to designate code blocks. Codefoldi
 ### Firstline Comment Folding
 Allows collapsing of Python code cells to a single comment line. This is useful for long codecells. The algorithm simply looks for a comment in the first line and allows folding in the rest of the cell.
 
-![](https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/wiki-images/codefolding_firstline_unfolded.png)
+![](codefolding_firstline_unfolded.png)
 
 The code above can be folded like this:
 
-![](https://raw.github.com/ipython-contrib/IPython-notebook-extensions/master/wiki-images/codefolding_firstline_folded.png)
+![](codefolding_firstline_folded.png)
 
 
 Installation
