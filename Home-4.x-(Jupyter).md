@@ -81,7 +81,7 @@ import notebook
 D = notebook.nbextensions.DisableNBExtensionApp()
 D.disable_nbextension('usability/codefolding/main')
 ```
-The configuration is stored in either `jupyter_config_dir()/notebok.json` or `jupyter_config_dir()/nbconfig/notebook.json` depending on your Jupyter (4.0.xx or master) version.
+The configuration is stored in either `jupyter_config_dir()/notebook.json` or `jupyter_config_dir()/nbconfig/notebook.json` depending on your Jupyter (4.0.xx or master) version.
 
 If you reload the notebook after enabling a notebook extension, the extension will be loaded. You can check the Javascript console to confirm.
 
@@ -98,50 +98,79 @@ The repository is organized in different categories:
 | [styling](#styling)       | Styling schemes for different looks of the notebook |
 | [slidemode](#slidemode)   | Slideshow creation                                  |
 | [testing](#testing)       | Extensions in a early stage                         |
+| codemirrormode            | Extra codemirror highlighting syntaxes              |
+
+Some extensions have wiki pages of their own, but the repository is gradually
+switching to having documentation stored in readme files in the extensions
+themselves.
+All recently-updated extensions should have a readme file, or at least a yaml
+descriptor file, which can be viewed either from the
+[config extension](Config-Extension), or failing that, on the github repository.
+
 
 
 Usability
 ---------
 
-| File or Directory                                   | Description                                                    | Status   |
-| ----------------------------------------------------|----------------------------------------------------------------|----------|
-| [chrome_clipboard](Chrome-Clipboard)                | Add system clipboard actions with Chrome                       | working  |
-| [codefolding](Codefolding)                          | Fold code blocks using Alt-F or clicking on gutter             |          |
-| [comment-uncomment.js](Comment-Uncomment)           | Toggle comments in selected lines using Alt-C                  |          |
-| [executeTime.js](Execute-Timings)                   | Display when each cell has been executed and how long it took  |          |
-| [drag-and-drop](Drag-and-Drop)                      | Allow dragging of images into a notebook                       | working  |
-| [hide_input_all](Hide-Input-All)                    | Hide all codecells in a notebook                               |          |
-| [latex_envs](LaTeX-Environments)                    | (some) LaTeX commands and environments in markdown cells       | working  |
-| [limit-output](Limit-Output)                        | Limit codecell output                                          | working  |
-| [navigation-hotkeys](Navigation-Hotkeys)            | Change hotkeys for navigation in notebook                      |          |
-| [python-markdown](Python-Markdown)                  | Display Python variables in markdown                           |          |
-| [read-only.js](Readonly)                            | Allow codecells to be set read-only, so no editing is possible |          |
-| [rubberband](Rubberband)                            | Multi-cell selection tool                                      |          |
-| [runtools](Runtools)                                | Add toolbar buttons for additional code execution options      |          |
-| [search-replace](Search-&-Replace)                  | Add a toolbar for notebook-wide search and replace             | working  |
-| [skip-traceback](Skip-Traceback)                    | Don't display traceback, only error type and message           | working  |
+| File or Directory                         | Description                                                                          | Status   |
+| ------------------------------------------|--------------------------------------------------------------------------------------|----------|
+| autosavetime                              | Set the notebook autosave interval, and/or add a selector to the toolbar to set it   | working  |
+| autoscroll                                | Exert control over the output autoscroll threshold                                   | working  |
+| code_font_size                            | Adds toolbar buttons to increase and decrease code cells' font size                  | working  |
+| [chrome_clipboard](Chrome-Clipboard)      | Add system clipboard actions with Chrome browser                                     | working  |
+| [codefolding](Codefolding)                | Fold code blocks using `Alt-F` or clicking on gutter                                 |          |
+| collapsible_headings                      | Make notebook into collapsible sections, separated by headings                       | working  |
+| [comment-uncomment](Comment-Uncomment)    | Toggle comments in selected lines using `Alt-C`                                      |          |
+| datestamper                               | Add a toolbar button which pastes the current time & date into the current cell      | working  |
+| [dragdrop](Drag-and-Drop)                 | Allow dragging of images into a notebook                                             | working  |
+| equation-numbering                        | Enables equation autonumbering and resetting the equation count                      |          |
+| [execute_time](Execute-Timings)           | Display when each cell was last executed, and how long it took                       | working  |
+| exercise                                  | Define a group of cells as an "exercise", then hide/show the solution cells          |          |
+| exercise2                                 | As above, but with a different UI for showing/hiding solutions                       |          |
+| help_panel                                | Display keyboard help in a panel to the right side of the notebook, or fullscreen    | working  |
+| highlighter                               | Enable highlighting selected text in markdown cells                                  |          |
+| hide_input                                | toggle display of selected code cell's input                                         |          |
+| [hide_input_all](Hide-Input-All)          | Hide all codecells in a notebook                                                     |          |
+| init_cell                                 | Mark cells as 'initialization' cells, to be run on notebook load, or clicking button |          |
+| keyboard_shortcut_editor                  | Edit or remove Jupyter keyboard shortcuts, or add own new ones                       | working  |
+| [latex_envs](LaTeX-Environments)          | (some) LaTeX commands and environments in markdown cells                             | working  |
+| [limit-output](Limit-Output)              | Limit length of codecell output                                                      | working  |
+| move_selected_cells                       | Move selected cell(s) using keyboard shortcuts `Alt-up` and `Alt-down`               |          |
+| [navigation-hotkeys](Navigation-Hotkeys)  | Change hotkeys for navigation in notebook (see also keyboard shortcut editor, above) |          |
+| notify                                    | Show a browser notification when kernel becomes idle after being busy for a while    | working  |
+| [python-markdown](Python-Markdown)        | Display Python variables in markdown                                                 |          |
+| qtconsole                                 | Launch a QTConsole attached to the running kernel                                    |          |
+| [read-only](Readonly)                     | Allow codecells to be set read-only, so no editing is possible                       |          |
+| [rubberband](Rubberband)                  | Multi-cell selection tool (this is redundant in newer Jupyter versions)              |          |
+| ruler                                     | Enables the CodeMirror ruler feature                                                 | working  |
+| [runtools](Runtools)                      | Add toolbar buttons for additional code execution options                            |          |
+| [search-replace](Search-&-Replace)        | Add a toolbar for notebook-wide search and replace                                   | working  |
+| [skip-traceback](Skip-Traceback)          | Don't display traceback, only error type and message                                 | working  |
+| toc                                       | Displays a table of contents composed of the notebook's markdown header cells        |          |
+| toc2                                      | A toc, but floating (draggable). Also optionally, allows automatic section numbering |          |
+| toggle_all_line_numbers                   | Add a toolbar button and hotkey to toggle all cells' line numbers on or off          | working  |
 
 
 Publishing
 ----------
 
-| File or Directory                                   | Description                                                    | Status   |
-| ----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| [printview-button](Printview-Button)                | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile. |          |
-| [htmltools/js_highlight.py](Javascript-Highlighter) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter                      | untested |
-
+| File or Directory                                   | Description                                                                                                                                            | Status   |
+| ----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| [printview-button](Printview-Button)                | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.            | working  |
+| [htmltools/js_highlight.py](Javascript-Highlighter) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter                                 | untested |
+| publishing/gist_it                                  | Add a toolbar button to publish the current notebook as a gist. Can make anonymous gists, or use an access token to create and update user-owned gists | working  |
 
 Styling
-=======
+-------
 
 | File or Directory                                   | Description                                                    | Status   |
 | ----------------------------------------------------|----------------------------------------------------------------|----------|
 | styling/css_selector                                |                                                                |          |
-| styling/zenmode                                     |                                                                |          |
+| styling/zenmode                                     | Adds a distraction-free 'zen' mode to the notebook             | working  |
 
 
 Slidemode
-=========
+---------
 
 | File or Directory                                   | Description                                                    | Status   |
 | ----------------------------------------------------|----------------------------------------------------------------|----------|
@@ -149,18 +178,32 @@ Slidemode
 
 
 Testing
-=======
+-------
 
-| File or Directory                                   | Description                                                    | Status   |
-| ----------------------------------------------------|----------------------------------------------------------------|----------|
-| [hierarchical_collapse](wiki/Hierarchical-Collapse) |  Adds a button to hide all cells below the selected heading    |          |
-| history                                             |                                                                |          |
-| swc                                                 |                                                                |          |
-| cellstate                                           |                                                                |          |
+| File or Directory                                   | Description                                                                                                    | Status    |
+| ----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------|
+| [hierarchical_collapse](Hierarchical-Collapse)      | Adds a button to hide all cells below the selected heading. Buggy - see usability/collapsible_headings instead | buggy     |
+| history                                             |                                                                                                                | broken    |
+| swc                                                 | software carpentry - seems broken                                                                              | broken    |
+| cellstate                                           | See usability/runtools, which includes this plus more functionality                                            | redundant |
+
+Codemirrormode
+--------------
+
+| File or Directory                                   | Description                                | Status    |
+| ----------------------------------------------------|--------------------------------------------|-----------|
+| codemirrormode/skill                                | Enable SKILL syntax support for CodeMirror | working   |
 
 
 General installation instructions
 =================================
+
+In general, it's easiest to install all the extensions in the repository using
+the Anaconda package, or the setup.py script (see below).
+Then you can use the [config extension](Config-Extension) to choose which
+extensions to activate, and configure any options they provide.
+
+You can also attempt to use the instructions below to install individual extensions.
 
 Installing and activating notebook extensions works differently in Jupyter compared to previous (<4.x) IPython versions.
 Please be aware that since Jupyter is still in development, some commands may change in the future.
@@ -183,7 +226,7 @@ where the `nbextensions` directory is likely located in one of the locations giv
 
 Note the directory name for a package isn't always precisely the same as the name of the package. For instance, the directory for `drag-n-drop` is named `dragdrop`.
 
-On some systems, for example MacOS X using MacPorts, `jupyter nbextension` is executed using `jupyter-nbextension-#.#` where `#.#` is the version of Python being used by the notebook. 
+On some systems, for example Mac OSX using MacPorts, `jupyter nbextension` is executed using `jupyter-nbextension-#.#` where `#.#` is the version of Python being used by the notebook. 
 
 2. Activating an extension
 --------------------------
