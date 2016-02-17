@@ -1,11 +1,3 @@
+__NB Try the newer [Collapsible Headings](https://github.com/ipython-contrib/IPython-notebook-extensions/tree/master/nbextensions/usability/collapsible_headings) extension__. These extensions intend to provide collapsible sections in the notebook, separated by heading cells. However, the Hierarchical Collapse extension has been dormant for some time, and has a bunch of bugs. For the same functionality, plus more options and fewer bugs, try [Collapsible Headings](https://github.com/ipython-contrib/IPython-notebook-extensions/tree/master/nbextensions/usability/collapsible_headings).
+
 Allows us to hide all cells below the selected heading. This extension is still very much in testing.
-
-
-Installation
-============
-
-Follow the installation instructions appropriate to your IPython version as explained on the main wiki home pages:
-* [Home generic](Home)
-* [Home 4.x (Jupyter)](Home-4.x-(Jupyter))
-* [Home 3.x](Home-3.x)
-* [Home 2.x](Home-2.x)
