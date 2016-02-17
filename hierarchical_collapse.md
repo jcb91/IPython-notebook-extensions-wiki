@@ -1,3 +1,3 @@
- Allows to hide all cells below the selected heading
+Please see the alternative, slightly differently-named page [Hierarchical-Collapse](Hierarchical-Collapse).
 
  
