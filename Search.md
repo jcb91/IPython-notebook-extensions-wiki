@@ -1,7 +1,7 @@
 Simple search extension based on codemirror addon.
 Adds a search box to the notebook toolbar and selects search word if found.
 
-![](search.png)
+![](search-replace.png)
 
 Searches the whole notebook in markdown or code cells.
 
