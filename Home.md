@@ -25,8 +25,8 @@ General installation instructions
 
 Installing and activating notebook extensions works slightly differently depending on your IPython/Jupyter version.
 Please see the correct homepage for your version:
-* [2.x](Home-2.x)
-* [3.x](Home-3.x)
+* [2.x](Home-2.x#1-installing-the-notebook-extension-repository)
+* [3.x](Home-3.x#1-installing-the-notebook-extension-repository)
 * [4.x (Jupyter)](Home-4.x-(Jupyter))
 
 
