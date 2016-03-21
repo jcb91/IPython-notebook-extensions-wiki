@@ -1,1 +1,0 @@
-Please see the alternative, slightly differently-named page [Home-2.x](Home-2.x)

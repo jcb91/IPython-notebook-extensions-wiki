@@ -1,1 +1,0 @@
-Please see the alternative, slightly differently-named page [Execute-Timings](Execute-Timings).
