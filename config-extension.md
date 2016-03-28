@@ -2,7 +2,7 @@ There is a graphical user interface for activating/deactivating installed notebo
 
 ![](config.png)
 
-This is realized using a notebook server extension, new to IPython 3.x. 
+This is realized using a notebook server extension, new in IPython 3.x.
 In order to work, this config extension needs to be installed, and notebook extensions require a YAML description file in under the `nbextensions` directory (see installation notes, below) in order to be found.
 
 
@@ -49,7 +49,7 @@ __Locate your Jupyter/IPython config and data directories__
   print(jupyter_path())
   ```
 
-  The `jupyter_data_dir()` shows you where *local* extensions and templates can be installed.  
+  The `jupyter_data_dir()` shows you where *local* extensions and templates can be installed.
   The `jupyter_path()` shows you directories which are searched for *globally* installed extensions and templates.
 
 * To find your Jupyter __config directory__, open ipython and execute the following:
@@ -61,8 +61,8 @@ __Locate your Jupyter/IPython config and data directories__
   print(jupyter_config_path())
   ```
 
-  Similarly to the data directory,  
-  `jupyter_config_dir()` shows you where your *local* configuration files are stored.  
+  Similarly to the data directory,
+  `jupyter_config_dir()` shows you where your *local* configuration files are stored.
   `jupyter_config_path()` shows you where Jupyter will look for *global* configuration files.
 
 
@@ -139,15 +139,16 @@ Internals
 YAML file format
 ----------------
 
-The YAML file can have any name with the extension `YAML`, and describes the notebook extension. Note that keys (in bold) are case-sensitive.
+The YAML file can have any name with the extension `YAML`, and describes the notebook extension.
+Note that keys (in bold) are case-sensitive. Only the `Name` and `Main` keys are required.
 
 * **Type**          - identifier, must be 'IPython Notebook Extension'
 * **Name**          - unique name of the extension
 * **Description**   - short explanation of the extension
-* **Link**          - a url for more documentation
-* **Icon**          - a url for a small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
+* **Link**          - a relative path to a markdown readme file, or a url for more documentation
+* **Icon**          - a relative path or url for a small icon (rendered 120px high, should preferably end up 400px wide. Recall HDPI displays may benefit from a 2x resolution icon).
 * **Main**          - main javascript file that is loaded, typically 'main.js'
-* **Compatibility** - IPython version compatibility, e.g. '3.x' or '4.x' or '3.x 4.x'
+* **Compatibility** - Optional (but strongly recommended) IPython version compatibility, e.g. '3.x' or '4.x' or '3.x 4.x'
 * **Parameters**    - Optional list of configuration parameters. Each item is a dictionary with (some of) the following keys:
   * **name**        - (mandatory) this is the name used to store the configuration variable in the config json, so should be unique among all extensions
   * **description** - description of the configuration parameter
