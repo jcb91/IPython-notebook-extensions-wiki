@@ -107,8 +107,7 @@ Usability
 | [runtools](Runtools)                      | Add toolbar buttons for additional code execution options                            |          |
 | [search-replace](Search-&-Replace)        | Add a toolbar for notebook-wide search and replace                                   | working  |
 | [skip-traceback](Skip-Traceback)          | Don't display traceback, only error type and message                                 | working  |
-| toc                                       | Displays a table of contents composed of the notebook's markdown header cells        |          |
-| toc2                                      | A toc, but floating (draggable). Also optionally, allows automatic section numbering |          |
+| toc2                                      | Displays a table of contents composed of the notebook's markdown header cells        | working  |
 | toggle_all_line_numbers                   | Add a toolbar button and hotkey to toggle all cells' line numbers on or off          | working  |
 
 
@@ -143,7 +142,6 @@ Testing
 
 | File or Directory                                   | Description                                                                                                    | Status    |
 | ----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------|
-| [hierarchical_collapse](Hierarchical-Collapse)      | Adds a button to hide all cells below the selected heading. Buggy - see usability/collapsible_headings instead | buggy     |
 | history                                             |                                                                                                                | broken    |
 | swc                                                 | software carpentry - seems broken                                                                              | broken    |
 | cellstate                                           | See usability/runtools, which includes this plus more functionality                                            | redundant |
