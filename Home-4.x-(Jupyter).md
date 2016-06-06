@@ -12,10 +12,10 @@ Not all extensions are available for all versions.
 This page concerns the 4.x versions, which are supported by the `master` branch
 of this repository.
 Note: This is not related to the __Python__ version.
-See the main [Home][Home] page for other versions.
+See the main [Home](Home) page for other versions.
 
 Jupyter/IPython 4.x works differently than IPython 3.x.
-To learn what's changed see [Changes-3.x-to-4.x]
+To learn what's changed see [Changes-3.x-to-4.x](Changes-3.x-to-4.x)
 
 
 Checking/loading notebook extensions from Jupyter
@@ -195,7 +195,7 @@ where the `nbextensions` directory is likely located in one of the locations giv
 
 Note the directory name for a package isn't always precisely the same as the name of the package. For instance, the directory for `drag-n-drop` is named `dragdrop`.
 
-On some systems, for example Mac OSX using MacPorts, `jupyter nbextension` is executed using `jupyter-nbextension-#.#` where `#.#` is the version of Python being used by the notebook. 
+On some systems, for example Mac OSX using MacPorts, `jupyter nbextension` is executed using `jupyter-nbextension-#.#` where `#.#` is the version of Python being used by the notebook.
 
 2. Activating an extension
 --------------------------
