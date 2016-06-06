@@ -31,16 +31,26 @@ Make sure to use `user=True` if you have the extensions installed in your local 
 
 To enable an extension:
 ```Python
-import notebook
-E = notebook.nbextensions.EnableNBExtensionApp()
-E.enable_nbextension('usability/codefolding/main')
+from notebook import version_info
+ext_require_path = 'usability/codefolding/main'
+if version_info[0] > 4:  # notebook 5.x
+    from notebook.nbextensions import enable_nbextension
+    enable_nbextension('notebook', ext_require_path)
+else:  # notebook 4.x
+    from notebook.nbextensions import EnableNBExtensionApp
+    EnableNBExtensionApp().enable_nbextension(ext_require_path)
 ```
 
 To disable an extension:
 ```Python
-import notebook
-D = notebook.nbextensions.DisableNBExtensionApp()
-D.disable_nbextension('usability/codefolding/main')
+from notebook import version_info
+ext_require_path = 'usability/codefolding/main'
+if version_info[0] > 4:  # notebook 5.x
+    from notebook.nbextensions import disable_nbextension
+    disable_nbextension('notebook', ext_require_path)
+else:  # notebook 4.x
+    from notebook.nbextensions import DisableNBExtensionApp
+    DisableNBExtensionApp().disable_nbextension(ext_require_path)
 ```
 The configuration is stored in either `jupyter_config_dir()/notebook.json` or `jupyter_config_dir()/nbconfig/notebook.json` depending on your Jupyter (4.0.xx or master) version.
 
