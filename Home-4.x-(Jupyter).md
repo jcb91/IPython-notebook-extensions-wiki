@@ -30,28 +30,29 @@ notebook.nbextensions.check_nbextension('usability/codefolding/main.js', user=Tr
 Make sure to use `user=True` if you have the extensions installed in your local path (in `jupyter_data_dir()`).
 
 To enable an extension:
+
 ```Python
-from notebook import version_info
 ext_require_path = 'usability/codefolding/main'
-if version_info[0] > 4:  # notebook 5.x
+try:  # notebook >= 4.2.0
     from notebook.nbextensions import enable_nbextension
     enable_nbextension('notebook', ext_require_path)
-else:  # notebook 4.x
-    from notebook.nbextensions import EnableNBExtensionApp
+except ImportError:
+    from notebook.nbextensions import EnableNBExtensionApp    
     EnableNBExtensionApp().enable_nbextension(ext_require_path)
 ```
 
 To disable an extension:
+
 ```Python
-from notebook import version_info
 ext_require_path = 'usability/codefolding/main'
-if version_info[0] > 4:  # notebook 5.x
+try:  # notebook >= 4.2.0
     from notebook.nbextensions import disable_nbextension
     disable_nbextension('notebook', ext_require_path)
-else:  # notebook 4.x
+except ImportError:
     from notebook.nbextensions import DisableNBExtensionApp
     DisableNBExtensionApp().disable_nbextension(ext_require_path)
 ```
+
 The configuration is stored in either `jupyter_config_dir()/notebook.json` or `jupyter_config_dir()/nbconfig/notebook.json` depending on your Jupyter (4.0.xx or master) version.
 
 If you reload the notebook after enabling a notebook extension, the extension will be loaded. You can check the Javascript console to confirm.
