@@ -22,11 +22,13 @@ Checking/loading notebook extensions from Jupyter
 -------------------------------------------------
 
 You can check if the directory or a file (or list of files) exists:
+
 ```Python
-import notebook
-notebook.nbextensions.check_nbextension('usability/codefolding', user=True)
-notebook.nbextensions.check_nbextension('usability/codefolding/main.js', user=True)
+from notebook.nbextensions import check_nbextension
+check_nbextension('usability/codefolding', user=True)
+check_nbextension('usability/codefolding/main.js', user=True)
 ```
+
 Make sure to use `user=True` if you have the extensions installed in your local path (in `jupyter_data_dir()`).
 
 To enable an extension:
