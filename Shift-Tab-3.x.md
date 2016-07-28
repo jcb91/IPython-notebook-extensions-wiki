@@ -1,7 +1,7 @@
 Removed extension
 =================
 
-This extension is no longer necessary so it has been removed [on pull request 185](https://github.com/ipython-contrib/IPython-notebook-extensions/pull/185). 
+This extension is no longer necessary so it has been removed [on pull request 185](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/pull/185).
 
 You can see the last version of the code there if you are interested in the internals
 of how it was working. 

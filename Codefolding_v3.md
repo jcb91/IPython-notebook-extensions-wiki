@@ -32,13 +32,13 @@ The code above can be folded like this:
 
 Installation
 ============
-Install the master version of the IPython-notebook-extensions repository as explained on the main wiki page
-[here](https://github.com/ipython-contrib/IPython-notebook-extensions/wiki/Home-3x).
+Install the master version of the jupyter_contrib_nbextensions repository as explained on the main wiki page
+[here](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/wiki/Home-3x).
 
-Then load the extension from within the IPyton notebook:
+Then load the extension from within the IPython notebook:
 ```javascript
 %%javascript
-IPython.load_extensions('IPython-notebook-extensions-master/usability/codefolding/codefolding');
+IPython.load_extensions('codefolding/main');
 ```
 
 ## Internals

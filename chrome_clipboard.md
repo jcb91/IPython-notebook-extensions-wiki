@@ -21,7 +21,7 @@ http://youtu.be/iU9dNe4vMUY
 From IPython simply call
 ```python
 import IPython
-IPython.html.nbextensions.install_nbextension('https://github.com/ipython-contrib/IPython-notebook-extensions/raw/master/usability/chrome_clipboard.js')
+IPython.html.nbextensions.install_nbextension('https://github.com/ipython-contrib/jupyter_contrib_nbextensions/raw/master/src/jupyter_contrib_nbextensions/nbextensions/chrome_clipboard/main.js')
 ```
 
 Then load the extension from within the IPyton notebook:
