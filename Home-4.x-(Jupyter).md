@@ -171,7 +171,7 @@ Configuration
 During the second part of the install (executing
 `jupyter contrib nbextension install`), the jupyter-notebook and
 jupyter-nbconvert configuration files will be automatically updated.
-In addition, `jupyter_nbextensions_configurator` is activated.
+In addition, `jupyter_nbextensions_configurator` is enabled.
 You can now configure the individual extensions through the config page
 `http://localhost:8888/nbextensions`, or from the nbextensions tab on the main
 jupyter dashboard (files page).

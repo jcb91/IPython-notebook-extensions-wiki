@@ -6,7 +6,7 @@
 [2.x](Home-2.x)
 
 
-### Activation / Deactivation
+### Enabling / Disabling
 
 [Config Extension](Config-Extension)
 

@@ -100,7 +100,7 @@ Testing
 General installation instructions
 =================================
 
-Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
+Installing and enabling notebook extensions works differently in IPython 3.x compared to 2.x.
 Although it is still possible to use the instructions below to modify `custom.js` for versions above 2.x, it is discouraged.
 
 Notebook extensions can be installed by copying the extension's corresponding javascript file and its accompanying files to the `nbextensions` directory of your local IPython directory (aka IPYTHONDIR) and loading it either directly in a single notebook, or adding it to the `custom.js` in your local profile in order for it to load for every notebook.
@@ -166,9 +166,9 @@ IPython.load_extensions('usability/rubberband/main');
 _Note_: Be careful not to include the `.js` file extension in the extension name.
 
 
-## 2. Activating an extension
+## 2. Enabling an extension
 
-*Activating*, or *enabling* an extension means configuring things such that the extension loads automatically for every notebook.
+*Enabling* an extension means configuring things such that the extension loads automatically for every notebook.
 In Ipython 2.x, if you want an extension to be always loaded, you need to call it in your local `custom.js` file.
 First locate your profile directory:
 
@@ -196,7 +196,7 @@ Adding the extension to custom.js
 
 Your `custom.js` should look like this:
 ```javascript
-// activate extensions only after Notebook is initialized
+// load extensions only after Notebook is initialized
 require(["base/js/events"], function (events) {
 $([IPython.events]).on("app_initialized.NotebookApp", function () {
     /* load your extension here */

@@ -95,7 +95,7 @@ Testing
 General installation instructions
 =================================
 
-Installing and activating notebook extensions works differently in IPython 3.x compared to 2.x.
+Installing and enabling notebook extensions works differently in IPython 3.x compared to 2.x.
 Although it is still possible to use the old 2.x and modify `custom.js`, it is discouraged. Using one of the newer methods below is encouraged.
 
 * If you are using Anaconda, you can try using one of the conda packages on binstar (the standard installation steps below will install the package to the standard system paths, not the custom Anaconda paths; note also that  these packages are updated manually and may lag behind the Github repository):
@@ -162,15 +162,15 @@ IPython.load_extensions('usability/rubberband/main');
 _Note_: Be careful not to include the `.js` file extension in the extension name.
 
 
-## 2. Activating an extension
+## 2. Enabling an extension
 
-*Activating*, or *enabling* an extension means configuring things such that the extension loads automatically for every notebook.
+*Enabling* an extension means configuring things such that the extension loads automatically for every notebook.
 
-There is a graphical interface for activating/deactivating notebook extensions now. You might want to use it: [config-extension](Config-Extension)
+There is a graphical interface for enabling/disabling notebook extensions now. You might want to use it: [config-extension](Config-Extension)
 
 Without using the GUI [config-extension](Config-Extension), the easiest way to enable an extension is to use
 the requests module to communicate with the IPython config service directly.
-For example, to activate the `python-markdown` extension, you need to provide the name and local path (without the `.js` extension) and call the config service in IPython:
+For example, to enable the `python-markdown` extension, you need to provide the name and local path (without the `.js` extension) and call the config service in IPython:
 
 ```python
 from IPython.html.services.config import ConfigManager
@@ -180,10 +180,10 @@ cm.update('notebook', {"load_extensions": {"usability/runtools/main": True}})
 ```
 
 
-4. Deactivating extensions
---------------------------
+4. Disabling extensions
+-----------------------
 
-To deactivate an extension from being reloaded, you can either use the [config-extension](Config-Extension) mentioned above, or you can use a very similar approach to that detailed previously, talking to the IPython config service. In this case you specify `None` as value with the extension name as key:
+To disable an extension from being reloaded, you can either use the [config-extension](Config-Extension) mentioned above, or you can use a very similar approach to that detailed previously, talking to the IPython config service. In this case you specify `None` as value with the extension name as key:
 
 ```Python
 from IPython.html.services.config import ConfigManager
@@ -193,10 +193,10 @@ cm.update('notebook', {"load_extensions": {"usability/runtools/main": None}})
 ```
 
 
-5. Viewing activated extensions
--------------------------------
+5. Viewing enabled extensions
+-----------------------------
 
-You can generate a table of currently activated extensions by executing the following in a notebook cell:
+You can generate a table of currently enabled extensions by executing the following in a notebook cell:
 
 ```Python
 from IPython.html.services.config import ConfigManager
