@@ -25,8 +25,8 @@ You can check if the directory or a file (or list of files) exists:
 
 ```Python
 from notebook.nbextensions import check_nbextension
-check_nbextension('usability/codefolding', user=True)
-check_nbextension('usability/codefolding/main.js', user=True)
+check_nbextension('codefolding', user=True)
+check_nbextension('codefolding/main.js', user=True)
 ```
 
 Make sure to use `user=True` if you have the extensions installed in your local path (in `jupyter_data_dir()`).
@@ -34,19 +34,19 @@ Make sure to use `user=True` if you have the extensions installed in your local 
 To enable an extension:
 
 ```Python
-ext_require_path = 'usability/codefolding/main'
+ext_require_path = 'codefolding/main'
 try:  # notebook >= 4.2.0
     from notebook.nbextensions import enable_nbextension
     enable_nbextension('notebook', ext_require_path)
 except ImportError:
-    from notebook.nbextensions import EnableNBExtensionApp    
+    from notebook.nbextensions import EnableNBExtensionApp
     EnableNBExtensionApp().enable_nbextension(ext_require_path)
 ```
 
 To disable an extension:
 
 ```Python
-ext_require_path = 'usability/codefolding/main'
+ext_require_path = 'codefolding/main'
 try:  # notebook >= 4.2.0
     from notebook.nbextensions import disable_nbextension
     disable_nbextension('notebook', ext_require_path)
@@ -63,17 +63,6 @@ If you reload the notebook after enabling a notebook extension, the extension wi
 Notebook extensions for Jupyter Version 4.x
 ===========================================
 
-The repository is organized in different categories:
-
-| Name                      | Description                                         |
-|---------------------------|-----------------------------------------------------|
-| [usability](#usability)   | Additional functionality for the notebook           |
-| [publishing](#publishing) | Getting your notebooks out in the wild              |
-| [styling](#styling)       | Styling schemes for different looks of the notebook |
-| [slidemode](#slidemode)   | Slideshow creation                                  |
-| [testing](#testing)       | Extensions in a early stage                         |
-| codemirrormode            | Extra codemirror highlighting syntaxes              |
-
 Some extensions have wiki pages of their own, but the repository is gradually
 switching to having documentation stored in readme files in the extensions
 themselves.
@@ -81,18 +70,15 @@ All recently-updated extensions should have a readme file, or at least a yaml
 descriptor file, which can be viewed either from the
 [config extension](Config-Extension), or failing that, on the github repository.
 
-
-
-Usability
----------
-
 | File or Directory                         | Description                                                                          | Status   |
 | ------------------------------------------|--------------------------------------------------------------------------------------|----------|
 | autosavetime                              | Set the notebook autosave interval, and/or add a selector to the toolbar to set it   | working  |
 | autoscroll                                | Exert control over the output autoscroll threshold                                   | working  |
-| code_font_size                            | Adds toolbar buttons to increase and decrease code cells' font size                  | working  |
+| cellstate                                 | See usability/runtools, which includes this plus more functionality                  | redundant |
 | [chrome_clipboard](Chrome-Clipboard)      | Add system clipboard actions with Chrome browser                                     | working  |
+| code_font_size                            | Adds toolbar buttons to increase and decrease code cells' font size                  | working  |
 | [codefolding](Codefolding)                | Fold code blocks using `Alt-F` or clicking on gutter                                 |          |
+| skill                                     | Enable SKILL syntax support for CodeMirror                                           | working  |
 | collapsible_headings                      | Make notebook into collapsible sections, separated by headings                       | working  |
 | [comment-uncomment](Comment-Uncomment)    | Toggle comments in selected lines using `Alt-C`                                      |          |
 | datestamper                               | Add a toolbar button which pastes the current time & date into the current cell      | working  |
@@ -102,9 +88,11 @@ Usability
 | exercise                                  | Define a group of cells as an "exercise", then hide/show the solution cells          |          |
 | exercise2                                 | As above, but with a different UI for showing/hiding solutions                       |          |
 | help_panel                                | Display keyboard help in a panel to the right side of the notebook, or fullscreen    | working  |
-| highlighter                               | Enable highlighting selected text in markdown cells                                  |          |
 | hide_input                                | toggle display of selected code cell's input                                         |          |
 | [hide_input_all](Hide-Input-All)          | Hide all codecells in a notebook                                                     |          |
+| highlighter                               | Enable highlighting selected text in markdown cells                                  |          |
+| history                                   |                                                                                      | broken   |
+| htmltools/js_highlight.py](Javascript-Highlighter) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter   | untested |
 | init_cell                                 | Mark cells as 'initialization' cells, to be run on notebook load, or clicking button |          |
 | keyboard_shortcut_editor                  | Edit or remove Jupyter keyboard shortcuts, or add own new ones                       | working  |
 | [latex_envs](LaTeX-Environments)          | (some) LaTeX commands and environments in markdown cells                             | working  |
@@ -112,6 +100,8 @@ Usability
 | move_selected_cells                       | Move selected cell(s) using keyboard shortcuts `Alt-up` and `Alt-down`               |          |
 | [navigation-hotkeys](Navigation-Hotkeys)  | Change hotkeys for navigation in notebook (see also keyboard shortcut editor, above) |          |
 | notify                                    | Show a browser notification when kernel becomes idle after being busy for a while    | working  |
+| [printview-button](Printview-Button)      | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.            | working  |
+| gist_it                                   | Add a toolbar button to publish the current notebook as a gist. Can make anonymous gists, or use an access token to create and update user-owned gists | working  |
 | [python-markdown](Python-Markdown)        | Display Python variables in markdown                                                 |          |
 | qtconsole                                 | Launch a QTConsole attached to the running kernel                                    |          |
 | [read-only](Readonly)                     | Allow codecells to be set read-only, so no editing is possible                       |          |
@@ -120,51 +110,12 @@ Usability
 | [runtools](Runtools)                      | Add toolbar buttons for additional code execution options                            |          |
 | [search-replace](Search-&-Replace)        | Add a toolbar for notebook-wide search and replace                                   | working  |
 | [skip-traceback](Skip-Traceback)          | Don't display traceback, only error type and message                                 | working  |
+| slidemode                                 | Make slide creation for reveal.js easier                                             |          |
+| css_selector                              |                                                                                      |          |
+| zenmode                                   | Adds a distraction-free 'zen' mode to the notebook                                   | working  |
+| swc                                       | software carpentry - seems broken                                                    | broken   |
 | toc2                                      | Displays a table of contents composed of the notebook's markdown header cells        | working  |
 | toggle_all_line_numbers                   | Add a toolbar button and hotkey to toggle all cells' line numbers on or off          | working  |
-
-
-Publishing
-----------
-
-| File or Directory                                   | Description                                                                                                                                            | Status   |
-| ----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
-| [printview-button](Printview-Button)                | Add a toolbar button to call `nbconvert --to html` for current the notebook and display html in new browser tab. Uses current user profile.            | working  |
-| [htmltools/js_highlight.py](Javascript-Highlighter) | A python tool to customize the css classes of nbconvert's html code blocks to fit your favourite JS syntax highlighter                                 | untested |
-| publishing/gist_it                                  | Add a toolbar button to publish the current notebook as a gist. Can make anonymous gists, or use an access token to create and update user-owned gists | working  |
-
-Styling
--------
-
-| File or Directory                                   | Description                                                    | Status   |
-| ----------------------------------------------------|----------------------------------------------------------------|----------|
-| styling/css_selector                                |                                                                |          |
-| styling/zenmode                                     | Adds a distraction-free 'zen' mode to the notebook             | working  |
-
-
-Slidemode
----------
-
-| File or Directory                                   | Description                                                    | Status   |
-| ----------------------------------------------------|----------------------------------------------------------------|----------|
-| slidemode                                           | Make slide creation for reveal.js easier                       |          |
-
-
-Testing
--------
-
-| File or Directory                                   | Description                                                                                                    | Status    |
-| ----------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------|
-| history                                             |                                                                                                                | broken    |
-| swc                                                 | software carpentry - seems broken                                                                              | broken    |
-| cellstate                                           | See usability/runtools, which includes this plus more functionality                                            | redundant |
-
-Codemirrormode
---------------
-
-| File or Directory                                   | Description                                | Status    |
-| ----------------------------------------------------|--------------------------------------------|-----------|
-| codemirrormode/skill                                | Enable SKILL syntax support for CodeMirror | working   |
 
 
 General installation instructions
