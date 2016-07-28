@@ -122,51 +122,29 @@ General installation instructions
 =================================
 
 In general, it's easiest to install all the extensions in the repository using
-the Anaconda package, or the setup.py script (see below).
-Then you can use the [config extension](Config-Extension) to choose which
-extensions to activate, and configure any options they provide.
+the installation instructions on the main repository readme, and use the
+[jupyter_nbextensions_configurator](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator)
+to choose which extensions to enable, and configure any options they provide.
 
-You can also attempt to use the instructions below to install individual extensions.
+Alternatively, to enable/diable an nbextension form the command line, you can
+use its require path together with the jupyter commands:
 
-Installing and activating notebook extensions works differently in Jupyter compared to previous (<4.x) IPython versions.
-Please be aware that since Jupyter is still in development, some commands may change in the future.
+    jupyter nbextension enable <extension require path>
 
-*There is a graphical interface for activating/deactivating notebook extensions now.* You might want to use it:
-[config-extension](Config-Extension)
+and
 
+    jupyter nbextension disable <extension require path>
 
-1. Installing an extension
---------------------------
+The require path is the relative path to the extension's main javascript file
+in the nbextensions directory, minus the files extensions (the `.js`).
+So for example for the `collapsible_headings` nbextension, it is
+`collapsible_headings/main`, and you would use
 
-`jupyter nbextension install <name of extension>`
-
-Example:
-`jupyter nbextension install nbextensions/usability/codefolding/main`
-
-where the `nbextensions` directory is likely located in one of the locations given by running
-
-`jupyter --paths`
-
-Note the directory name for a package isn't always precisely the same as the name of the package. For instance, the directory for `drag-n-drop` is named `dragdrop`.
-
-On some systems, for example Mac OSX using MacPorts, `jupyter nbextension` is executed using `jupyter-nbextension-#.#` where `#.#` is the version of Python being used by the notebook.
-
-2. Activating an extension
---------------------------
-
-`jupyter nbextension enable <name of extension>`
+    jupyter nbextension enable collapsible_headings/main
 
 
-3. Deactivating extensions
---------------------------
-
-`jupyter nbextension disable <name of extension>`
-
-
-4. Viewing activated extensions
--------------------------------
-
-You can generate a table of currently activated extensions by executing the following in a notebook cell:
+You can generate a table of currently enabled extensions by executing the
+following in a notebook cell:
 
 ```Python
 from IPython.html.services.config import ConfigManager
@@ -192,7 +170,14 @@ HTML(top + table + bottom)
 
 Configuration
 -------------
-During the package installation the jupyter-notebook and jupyter-nbconvert configuration files will be automatically updated. You can now configure the individual extensions through the config page `http://localhost:8888/nbextensions`.
+
+During the second part of the install (executing
+`jupyter contrib nbextension install`), the jupyter-notebook and
+jupyter-nbconvert configuration files will be automatically updated.
+In addition, `jupyter_nbextensions_configurator` is activated.
+You can now configure the individual extensions through the config page
+`http://localhost:8888/nbextensions`, or from the nbextensions tab on the main
+jupyter dashboard (files page).
 
 **Note:**
 If you have configured the Clusters tab in `jupyter_notebook_config.py` before installing the nbextensions package, the cluster tab may stop working and you will get the following warning when you start jupyter-notebook:

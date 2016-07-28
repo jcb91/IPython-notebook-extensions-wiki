@@ -1,3 +1,5 @@
+__This extension is redundant in 4.x Jupyter.__
+
 The dedent hotkey for the IPython notebook is `Ctrl-]`. Unfortunately, for non-US keyboards it is difficult or even impossible to generate this key combination.
 
 Therefore, the <b>shift-tab</b> extension allows using `Shift-tab` keys for dedent operation.
