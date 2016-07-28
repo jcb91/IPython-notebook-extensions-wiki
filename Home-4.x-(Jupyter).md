@@ -74,7 +74,7 @@ descriptor file, which can be viewed either from the
 | ------------------------------------------|--------------------------------------------------------------------------------------|----------|
 | autosavetime                              | Set the notebook autosave interval, and/or add a selector to the toolbar to set it   | working  |
 | autoscroll                                | Exert control over the output autoscroll threshold                                   | working  |
-| cellstate                                 | See usability/runtools, which includes this plus more functionality                  | redundant |
+| cellstate                                 | See runtools, which includes this plus more functionality                  | redundant |
 | [chrome_clipboard](Chrome-Clipboard)      | Add system clipboard actions with Chrome browser                                     | working  |
 | code_font_size                            | Adds toolbar buttons to increase and decrease code cells' font size                  | working  |
 | [codefolding](Codefolding)                | Fold code blocks using `Alt-F` or clicking on gutter                                 |          |
@@ -213,7 +213,7 @@ If an extension does not work, here is how you can check what is wrong:
 
 1. Clear your browser cache or start a private browser tab.
 2. Verify the extension can be loaded by the IPython notebook, for example:
-    `http://127.0.0.1:8888/nbextensions/usability/runtools/main.js`
+    `http://127.0.0.1:8888/nbextensions/runtools/main.js`
 3. Check for error messages in the JavaScript console of the browser.
 
 Feel free to improve this Wiki documentation!

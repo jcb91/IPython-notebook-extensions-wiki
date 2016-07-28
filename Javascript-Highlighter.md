@@ -3,7 +3,7 @@
 ``` bash
 # This one is for a blog post using Google prettify.
 $ nbconvert --to html --template basic MyNotebook.ipynb
-$ python $IPYTHON_CONTRIB_DIR/publishing/htmltools/js_highlight.py MyNotebook.html "prettyprint  lang-{lang}".
+$ python $IPYTHON_CONTRIB_DIR/htmltools/js_highlight.py MyNotebook.html "prettyprint  lang-{lang}".
 ```
 
 
