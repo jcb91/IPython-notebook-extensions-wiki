@@ -147,25 +147,22 @@ You can generate a table of currently enabled extensions by executing the
 following in a notebook cell:
 
 ```Python
-from IPython.html.services.config import ConfigManager
-from IPython.display import HTML
-ip = get_ipython()
-cm = ConfigManager(parent=ip, profile_dir=ip.profile_dir.location)
-extensions =cm.get('notebook')
-table = ""
-for ext in extensions['load_extensions']:
-    table += "<tr><td>%s</td>\n" % (ext)
+import os
 
-top = """
-<table border="1">
-  <tr>
-    <th>Extension name</th>
-  </tr>
-"""
-bottom = """
-</table>
-"""
-HTML(top + table + bottom)
+from IPython.display import HTML
+from notebook.services.config import ConfigManager
+
+table = (
+    '<table border="1"> <tr>'
+    '<th>section</th> <th>require path</th> <th>enabled?</th>'
+    '</tr>{}</table>')
+table_rows = ''
+cm = ConfigManager()
+for section in ['common', 'notebook', 'tree', 'edit', 'terminal']:
+    for req, enabled in cm.get(section).get('load_extensions', {}).items():
+        table_rows += '<tr><td>{}</td><td>{}</td><td>{}</td></tr>\n'.format(
+            section, req, enabled)
+HTML(table.format(table_rows))
 ```
 
 Configuration
